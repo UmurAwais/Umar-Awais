@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import logo from '../assets/web development.png';
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -138,8 +139,14 @@ const About = () => {
                       </svg>
                    </div>
                    
-                   {/* STATIC CENTER LOGO */}
-                   <span className="relative z-10 text-[18px] md:text-[24px] font-bold fill-black font-serif italic text-black">UA</span>
+                   {/* STATIC CENTER LOGO ASSET */}
+                   <div className="relative z-10 w-16 h-16 md:w-24 md:h-24 overflow-hidden rounded-full">
+                      <img 
+                        src={logo} 
+                        alt="Logo" 
+                        className="w-full h-full object-cover"
+                      />
+                   </div>
                 </div>
              </div>
           </div>

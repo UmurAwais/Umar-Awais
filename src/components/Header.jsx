@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../assets/web development.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,15 +53,15 @@ const Header = () => {
 
       <div className={`max-w-400 mx-auto px-6 py-6 md:px-12 flex items-center justify-between transition-all duration-700 ${isScrolled ? 'translate-y-3 scale-[0.97]' : ''}`}>
         
-        {/* LOGO - Redined with Plus Jakarta Sans + Six Caps */}
+        {/* LOGO - Redined with Asset Image */}
         <div className="flex-1 pointer-events-auto">
           <a 
             href="#home" 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="group flex items-center gap-4 cursor-pointer"
           >
-            <div className="w-12 h-12 glass-premium rounded-full flex items-center justify-center transition-all duration-500 group-hover:bg-white group-hover:text-black">
-              <span className="text-2xl font-normal font-['Six_Caps'] tracking-widest scale-y-125">UA</span>
+            <div className="w-12 h-12 glass-premium rounded-full flex items-center justify-center transition-all duration-500 overflow-hidden group-hover:bg-white border border-white/10 group-hover:border-transparent">
+              <img src={logo} alt="Umar Awais Logo" className="w-full h-full object-cover rounded-full transition-all duration-500" />
             </div>
             <div className="hidden lg:flex flex-col">
               <span className="text-[14px] font-bold tracking-tight text-white/90 group-hover:text-white transition-colors leading-none">
