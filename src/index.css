@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Six Caps', sans-serif;
+    font-weight: 400;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom high-end scrollbar - Black & White Theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 10px;
+  }
+}
+
+@layer utilities {
+  .glass-premium {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Sophisticated Shimmer */
+  .shimmer-premium {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-premium::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.03),
+      transparent
+    );
+    transform: rotate(45deg);
+    transition: all 0.5s;
+    opacity: 0;
+  }
+
+  .shimmer-premium:hover::after {
+    opacity: 1;
+    transform: rotate(45deg) translate(20%, 20%);
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+  }
+}
