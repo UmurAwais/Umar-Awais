@@ -36,8 +36,8 @@ const Header = () => {
   const navItems = [
     { label: 'Home', id: 'home' },
     { label: 'About', id: 'about' },
-    { label: 'Services', id: 'services' },
     { label: 'Portfolio', id: 'portfolio' },
+    { label: 'Services', id: 'services' },
     { label: 'Blog', id: 'blog' },
     { label: 'Contact', id: 'contact' },
   ];
@@ -46,11 +46,11 @@ const Header = () => {
     <header className="fixed top-0 left-0 w-full z-100 pointer-events-none transition-all duration-700">
       {/* Scroll Progress Detail */}
       <div 
-        className="h-[1.5px] bg-gradient-to-r from-transparent via-white/40 to-transparent transition-all duration-300 shadow-[0_0_10px_rgba(255,255,255,0.3)]" 
+        className="h-[1.5px] bg-linear-to-r from-transparent via-white/40 to-transparent transition-all duration-300 shadow-[0_0_10px_rgba(255,255,255,0.3)]" 
         style={{ width: `${scrollProgress}%` }}
       />
 
-      <div className={`max-w-[1600px] mx-auto px-6 py-6 md:px-12 flex items-center justify-between transition-all duration-700 ${isScrolled ? 'translate-y-[-12px] scale-[0.97]' : ''}`}>
+      <div className={`max-w-400 mx-auto px-6 py-6 md:px-12 flex items-center justify-between transition-all duration-700 ${isScrolled ? 'translate-y-3 scale-[0.97]' : ''}`}>
         
         {/* LOGO - Redined with Plus Jakarta Sans + Six Caps */}
         <div className="flex-1 pointer-events-auto">
@@ -114,8 +114,8 @@ const Header = () => {
         {/* MOBILE CONTROLS */}
         <button className="md:hidden pointer-events-auto p-4 glass-premium rounded-2xl cursor-pointer group">
           <div className="flex flex-col gap-1.5">
-            <div className="w-8 h-[2px] bg-white transition-all transform group-hover:translate-x-1"></div>
-            <div className="w-8 h-[2px] bg-white transition-all"></div>
+            <div className="w-8 h-0.5 bg-white transition-all transform group-hover:translate-x-1"></div>
+            <div className="w-8 h-0.5 bg-white transition-all"></div>
           </div>
         </button>
       </div>

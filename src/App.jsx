@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import TextMarquee from './components/TextMarquee'
 import ScrollToTop from './components/ScrollToTop'
+import Projects from './components/Projects'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Hero />
       <TextMarquee text="TRANSFORMING AGENCY" speed={40} />
       <About />
+      <Projects />
       <ScrollToTop />
       {/* Future sections will go here */}
     </div>

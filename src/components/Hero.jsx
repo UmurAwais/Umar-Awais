@@ -45,19 +45,19 @@ const Hero = () => {
           <div className="absolute inset-0 opacity-[0.2] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
           
           {/* Complex Masking / Gradients for "Aesthetic" look */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-black via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-black/20"></div>
           
           {/* Architectural Light Beam */}
-          <div className="absolute top-0 right-1/4 w-[1px] h-full bg-white/10 blur-[1px] rotate-[-15deg]"></div>
+          <div className="absolute top-0 right-1/4 w-px h-full bg-white/10 blur-[1px] rotate-[-15deg]"></div>
         </div>
       </div>
 
       {/* --- CONTENT LAYER --- */}
-      <div className="relative z-10 w-full max-w-[1700px] mx-auto px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+      <div className="relative z-10 w-full max-w-425 mx-auto px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
         
         {/* LEFT COMPONENT: THE BRANDING & INFO */}
-        <div className="flex-grow flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div className="grow flex flex-col items-center lg:items-start text-center lg:text-left">
           
           {/* DYNAMIC TYPOGRAPHY */}
           <div className="flex flex-col gap-4 mb-20">
@@ -76,7 +76,7 @@ const Hero = () => {
               <h1 className="text-[12vw] md:text-[8vw] lg:text-[100px] xl:text-[130px] font-bold tracking-tight leading-none text-white">
                 Fr
               </h1>
-              <div className="w-[10vw] md:w-[130px] lg:w-[160px] h-[5vw] md:h-[50px] lg:h-[75px] rounded-full border-2 border-white translate-y-2 lg:translate-y-4 shadow-[0_0_30px_rgba(255,255,255,0.1)]"></div>
+              <div className="w-[10vw] md:w-32.5 lg:w-40 h-[5vw] md:h-12.5 lg:h-18.75 rounded-full border-2 border-white translate-y-2 lg:translate-y-4 shadow-[0_0_30px_rgba(255,255,255,0.1)]"></div>
               <h1 className="text-[12vw] md:text-[8vw] lg:text-[100px] xl:text-[130px] font-bold tracking-tight leading-none text-white">
                 nt-End Developer
               </h1>
@@ -97,14 +97,14 @@ const Hero = () => {
                </div>
             </div>
             {/* Paragraph Text */}
-            <p className="text-sm md:text-base lg:text-[17px] font-medium leading-[2.2] text-white/70 max-w-[500px]">
+            <p className="text-sm md:text-base lg:text-[17px] font-medium leading-[2.2] text-white/70 max-w-125">
                I am a <strong className="text-white font-bold tracking-tight">Professional Digital Designer and Front-End Developer.</strong> This architectural space explores minimalist digital works and structural interfaces crafted across several years.
             </p>
           </div>
         </div>
 
         {/* RIGHT SIDE: EMPTY SPACER (The image is in the BG layer on the right) */}
-        <div className="hidden lg:block w-[400px]"></div>
+        <div className="hidden lg:block w-100"></div>
 
       </div>
 

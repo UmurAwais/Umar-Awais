@@ -27,14 +27,14 @@ const ScrollToTop = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-10 right-10 z-[9999]">
+    <div className="fixed bottom-10 right-10 z-9999">
       <button
         type="button"
         onClick={scrollToTop}
         className={`
           flex items-center justify-center w-14 h-14 rounded-full 
           bg-white text-black transition-all duration-500 ease-in-out shadow-2xl
-          hover:scale-110 active:scale-95 group
+          hover:scale-110 active:scale-95 group cursor-pointer
           ${isVisible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-10 pointer-events-none'}
         `}
       >
