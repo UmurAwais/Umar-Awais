@@ -133,9 +133,9 @@ const Projects = () => {
                       SELECTED PROJECTS
                    </h2>
                    {/* Ghost Text Layer */}
-                   <h3 className="absolute -top-6 md:-top-10 -left-6 md:-left-10 text-[18vw] md:text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 transition-all duration-1000 group-hover:translate-x-10">
+                   <span className="absolute -top-6 md:-top-10 -left-6 md:-left-10 text-[18vw] md:text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 transition-all duration-1000">
                       PROJECTS
-                   </h3>
+                   </span>
                 </div>
              </div>
           </div>
