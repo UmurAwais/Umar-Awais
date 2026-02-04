@@ -2,6 +2,15 @@ import React, { useEffect, useRef } from 'react';
 
 const Contact = () => {
   const sectionRef = useRef(null);
+  const [selectedServices, setSelectedServices] = React.useState([]);
+
+  const toggleService = (service) => {
+    setSelectedServices(prev => 
+      prev.includes(service) 
+        ? prev.filter(s => s !== service) 
+        : [...prev, service]
+    );
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -136,7 +145,12 @@ const Contact = () => {
                           <button 
                             key={option}
                             type="button"
-                            className="px-6 py-2.5 rounded-full border border-white/10 hover:border-white transition-all text-[10px] font-bold tracking-widest uppercase hover:bg-white hover:text-black cursor-pointer"
+                            onClick={() => toggleService(option)}
+                            className={`px-6 py-2.5 rounded-full border transition-all text-[10px] font-bold tracking-widest uppercase cursor-pointer ${
+                              selectedServices.includes(option)
+                                ? 'bg-white text-black border-white'
+                                : 'border-white/10 text-white hover:border-white hover:bg-white/5'
+                            }`}
                           >
                             {option}
                           </button>
