@@ -61,24 +61,24 @@ const Hero = () => {
           
           {/* DYNAMIC TYPOGRAPHY */}
           <div className="flex flex-col gap-4 mb-20">
-            {/* Row 1: Digital Designer & */}
+            {/* Row 1: Technical Designer & */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-8">
               <h1 className="text-[12vw] md:text-[8vw] lg:text-[100px] xl:text-[130px] font-bold tracking-tight leading-none text-white whitespace-nowrap">
-                Digital Designer
+                Technical Designer
               </h1>
               <div className="w-12 h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 rounded-full border-2 border-white flex items-center justify-center translate-y-1 lg:translate-y-2">
                  <span className="text-xl md:text-3xl lg:text-5xl font-light">&</span>
               </div>
             </div>
 
-            {/* Row 2: Front-End Developer */}
+            {/* Row 2: Full-Stack Engineer */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-3 md:gap-x-6">
               <h1 className="text-[12vw] md:text-[8vw] lg:text-[100px] xl:text-[130px] font-bold tracking-tight leading-none text-white">
-                Fr
+                Fu
               </h1>
               <div className="w-[10vw] md:w-32.5 lg:w-40 h-[5vw] md:h-12.5 lg:h-18.75 rounded-full border-2 border-white translate-y-2 lg:translate-y-4 shadow-[0_0_30px_rgba(255,255,255,0.1)]"></div>
               <h1 className="text-[12vw] md:text-[8vw] lg:text-[100px] xl:text-[130px] font-bold tracking-tight leading-none text-white">
-                nt-End Developer
+                ll-Stack Engineer
               </h1>
             </div>
           </div>
