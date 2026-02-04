@@ -116,7 +116,7 @@ const Projects = () => {
     <section 
       id="portfolio" 
       ref={sectionRef}
-      className="bg-black text-white py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden"
+      className="bg-black text-white py-20 md:py-28 px-6 md:px-12 lg:px-20 overflow-hidden"
     >
       <div className="max-w-425 mx-auto">
         

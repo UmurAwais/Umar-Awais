@@ -53,7 +53,7 @@ const Blog = () => {
     <section 
       id="blog" 
       ref={sectionRef}
-      className="bg-black text-white py-24 md:py-40 px-6 md:px-12 lg:px-20 overflow-hidden border-t border-white/5"
+      className="bg-black text-white py-20 md:py-28 px-6 md:px-12 lg:px-20 overflow-hidden border-t border-white/5"
     >
       <div className="max-w-425 mx-auto">
         

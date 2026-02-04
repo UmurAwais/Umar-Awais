@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Services from './components/Services'
 import Blog from './components/Blog'
+import Contact from './components/Contact'
 import TextMarquee from './components/TextMarquee'
 import ScrollToTop from './components/ScrollToTop'
 import Projects from './components/Projects'
@@ -22,6 +23,7 @@ const App = () => {
       <Projects />
       <Services />
       <Blog />
+      <Contact />
       <Footer />
       <ScrollToTop />
       {/* Future sections will go here */}
