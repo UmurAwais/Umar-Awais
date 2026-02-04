@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import kbcreatives from '../assets/kbcreatives.png';
 
 const Projects = () => {
   const sectionRef = useRef(null);
@@ -26,10 +27,10 @@ const Projects = () => {
   const projectList = [
     {
       id: 1,
-      title: "NORDIC ECOSYSTEM",
-      category: "Full Stack",
+      title: "KBCREATIVES.PK",
+      category: "ReactJS / Tailwind",
       year: "2024",
-      image: "https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?auto=format&fit=crop&q=80"
+      image: kbcreatives
     },
     {
       id: 2,
@@ -118,7 +119,7 @@ const Projects = () => {
       ref={sectionRef}
       className="bg-black text-white py-20 md:py-28 px-6 md:px-12 lg:px-20 overflow-hidden"
     >
-      <div className="max-w-425 mx-auto">
+      <div className="w-full">
         
         {/* --- SECTION HEADER (PATTERN SYNC) --- */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 mb-24">

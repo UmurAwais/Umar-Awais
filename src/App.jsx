@@ -12,7 +12,7 @@ import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-black max-w-400 mx-auto relative">
+    <div className="min-h-screen bg-black w-full relative">
       {/* Premium Grain Texture Overlay */}
       <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-9999 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
       

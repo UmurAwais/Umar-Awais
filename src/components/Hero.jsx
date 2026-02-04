@@ -54,7 +54,7 @@ const Hero = () => {
       </div>
 
       {/* --- CONTENT LAYER --- */}
-      <div className="relative z-10 w-full max-w-425 mx-auto px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
         
         {/* LEFT COMPONENT: THE BRANDING & INFO */}
         <div className="grow flex flex-col items-center lg:items-start text-center lg:text-left">

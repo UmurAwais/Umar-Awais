@@ -61,7 +61,7 @@ const Services = () => {
       ref={sectionRef}
       className="bg-black text-white py-20 md:py-28 px-6 md:px-12 lg:px-20 overflow-hidden border-t border-white/5"
     >
-      <div className="max-w-425 mx-auto">
+      <div className="w-full">
         
         {/* --- SECTION HEADER (PATTERN SYNC) --- */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 mb-32">

@@ -29,7 +29,7 @@ const About = () => {
       ref={sectionRef}
       className="relative bg-black text-white py-20 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden"
     >
-      <div className="max-w-425 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-0">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-0">
         
         {/* --- LEFT ASSET COLUMN --- */}
         <div className="lg:col-span-3 border-r border-white/5 pr-10 flex flex-col justify-between reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out">

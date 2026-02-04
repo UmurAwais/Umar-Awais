@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white py-12 px-6 md:px-12 lg:px-20 overflow-hidden border-t border-white/5">
-      <div className="max-w-425 mx-auto">
+      <div className="w-full">
         {/* --- BOTTOM BAR --- */}
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8 text-[11px] font-bold tracking-widest text-white/40 uppercase">
           
