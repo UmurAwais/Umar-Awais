@@ -82,7 +82,7 @@ const About = () => {
               >
                 ENGINEERING HIGH-END <br /> 
                 DIGITAL SOLUTIONS 
-                WTIH
+                WITH
               </h2>
               {/* Ghost Text exactly aligned behind heading */}
               <span className="absolute -bottom-10 left-0 text-[12vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 font-serif italic whitespace-nowrap">

@@ -26,26 +26,26 @@ const Blog = () => {
     {
       id: 1,
       date: "FEB 04, 2026",
-      title: "THE FUTURE OF MINIMALIST WEB DESIGN",
-      category: "DESIGN",
+      title: "SCALING ARCHITECTURAL INTERFACES IN REACT",
+      category: "ENGINEERING",
       image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80",
-      readTime: "5 MIN READ"
+      readTime: "7 MIN READ"
     },
     {
       id: 2,
       date: "JAN 28, 2026",
-      title: "BUILDING SCALABLE MERN STACK ARCHITECTURES",
-      category: "DEVELOPMENT",
+      title: "THE PSYCHOLOGY OF MINIMALIST E-COMMERCE",
+      category: "STRATEGY",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80",
-      readTime: "8 MIN READ"
+      readTime: "5 MIN READ"
     },
     {
       id: 3,
       date: "JAN 15, 2026",
-      title: "OPTIMIZING WORDPRESS FOR HIGH CONVERSION",
-      category: "ECOMMERCE",
+      title: "OPTIMIZING MERN STACK FOR CORE WEB VITALS",
+      category: "PERFORMANCE",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
-      readTime: "6 MIN READ"
+      readTime: "9 MIN READ"
     }
   ];
 

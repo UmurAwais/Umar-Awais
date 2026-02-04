@@ -26,85 +26,85 @@ const Projects = () => {
   const projectList = [
     {
       id: 1,
-      title: "FESTIVE MODE ONE",
-      category: "Web Design",
+      title: "NORDIC ECOSYSTEM",
+      category: "Full Stack",
       year: "2024",
       image: "https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?auto=format&fit=crop&q=80"
     },
     {
       id: 2,
-      title: "UM HOMEM ABRAÇA UMA",
+      title: "AXON TECHNICAL",
       category: "Development",
       year: "2024",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80"
     },
     {
       id: 3,
-      title: "FASHION NEXT STAGE",
+      title: "MAISON LUXURY",
       category: "E-Commerce",
       year: "2023",
       image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80"
     },
     {
       id: 4,
-      title: "GOLDEN WOMAN WEARING",
-      category: "Agency Site",
+      title: "VORTEX PROTOCOL",
+      category: "MERN Stack",
       year: "2023",
       image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=80"
     },
     {
       id: 5,
-      title: "JORGER CLARKSON",
-      category: "Personal Brand",
+      title: "LUMINA STUDIO",
+      category: "Brand Site",
       year: "2022",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80"
     },
     {
       id: 6,
-      title: "LONE FALCON DESERT",
-      category: "Protocol Design",
+      title: "GHOST INTERFACE",
+      category: "UI Engineering",
       year: "2021",
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80"
     },
     {
       id: 7,
-      title: "ARCHITECTURAL FLOW",
-      category: "UX Research",
+      title: "CORE ARCHIVE",
+      category: "System Design",
       year: "2024",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
     },
     {
       id: 8,
-      title: "MINIMALIST VOID",
-      category: "3D Design",
+      title: "NOVA ECOMMERCE",
+      category: "Shopify Plus",
       year: "2024",
       image: "https://images.unsplash.com/photo-1518005020470-588a440f9812?auto=format&fit=crop&q=80"
     },
     {
       id: 9,
-      title: "DIGITAL FRONTIER",
+      title: "KINETIC WEB",
       category: "Front-end",
       year: "2023",
       image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80"
     },
     {
       id: 10,
-      title: "NOIR IDENTITY",
+      title: "PRISM IDENTITY",
       category: "Branding",
       year: "2023",
       image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80"
     },
     {
       id: 11,
-      title: "KINETIC FORM",
-      category: "Motion Design",
+      title: "SILICON FLOW",
+      category: "Web App",
       year: "2022",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80"
     },
     {
       id: 12,
-      title: "GHOST PROTOCOL",
-      category: "UI Design",
+      title: "ONYX DASHBOARD",
+      category: "Dashboard",
       year: "2021",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
     }
