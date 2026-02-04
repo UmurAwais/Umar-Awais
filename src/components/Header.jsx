@@ -68,7 +68,7 @@ const Header = () => {
                 Umar Awais
               </span>
               <span className="text-[9px] font-medium tracking-[0.2em] text-white/30 uppercase mt-1">
-                Visual Designer
+                Full-Stack Engineer
               </span>
             </div>
           </a>
