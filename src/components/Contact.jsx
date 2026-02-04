@@ -154,9 +154,9 @@ const Contact = () => {
                            type="text" 
                            required
                            placeholder="Umar Awais"
-                           className="w-full bg-white/[0.02] border-b border-white/10 pt-4 pb-4 px-4 outline-none focus:border-white focus:bg-white/[0.05] transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/10 rounded-t-xl"
+                           className="w-full bg-white/2 border-b border-white/10 pt-4 pb-4 px-4 outline-none focus:border-white focus:bg-white/5 transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/10 rounded-t-xl"
                         />
-                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-700 group-focus-within/field:w-full"></div>
+                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-700 group-focus-within/field:w-full"></div>
                       </div>
                    </div>
 
@@ -169,9 +169,9 @@ const Contact = () => {
                            type="email" 
                            required
                            placeholder="hello@studio.com"
-                           className="w-full bg-white/[0.02] border-b border-white/10 pt-4 pb-4 px-4 outline-none focus:border-white focus:bg-white/[0.05] transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/10 rounded-t-xl"
+                           className="w-full bg-white/2 border-b border-white/10 pt-4 pb-4 px-4 outline-none focus:border-white focus:bg-white/5 transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/10 rounded-t-xl"
                         />
-                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-700 group-focus-within/field:w-full"></div>
+                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-700 group-focus-within/field:w-full"></div>
                       </div>
                    </div>
 
@@ -205,9 +205,9 @@ const Contact = () => {
                            rows="4"
                            required
                            placeholder="Tell us about the digital world you want to create..."
-                           className="w-full bg-white/[0.02] border-b border-white/10 pt-4 pb-4 px-4 outline-none focus:border-white focus:bg-white/[0.05] transition-all duration-700 text-lg font-medium text-white placeholder:text-white/10 resize-none leading-relaxed rounded-t-xl"
+                           className="w-full bg-white/2 border-b border-white/10 pt-4 pb-4 px-4 outline-none focus:border-white focus:bg-white/5 transition-all duration-700 text-lg font-medium text-white placeholder:text-white/10 resize-none leading-relaxed rounded-t-xl"
                         ></textarea>
-                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-700 group-focus-within/field:w-full"></div>
+                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-700 group-focus-within/field:w-full"></div>
                       </div>
                    </div>
 

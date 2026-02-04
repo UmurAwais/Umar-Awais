@@ -5,9 +5,9 @@ const Footer = () => {
 
   const socialLinks = [
     { label: 'Facebook', url: '#' },
-    { label: 'Twitter', url: '#' },
+    { label: 'Linkedin', url: '#' },
     { label: 'Instagram', url: '#' },
-    { label: 'Dribbble', url: '#' },
+    { label: 'Github', url: '#' },
   ];
 
   return (
@@ -18,8 +18,8 @@ const Footer = () => {
           
           {/* Copyright */}
           <div className="flex items-center gap-2">
-            <span>© {currentYear}.</span>
-            <span className="text-white/60">ALL RIGHTS RESERVED UMAR AWAIS</span>
+            <span>© {currentYear} UMAR AWAIS.</span>
+            <span className="text-white/60">ALL RIGHTS RESERVED.</span>
           </div>
 
           {/* Social Links Pills */}
