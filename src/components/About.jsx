@@ -42,27 +42,37 @@ const About = () => {
           </div>
           
           <div className="mt-12 pt-10 border-t border-white/10">
-            <div className="flex flex-col gap-2">
-              <div className="flex items-baseline gap-2">
-                <span className="text-8xl font-black tracking-tighter leading-none text-white">02</span>
-                <span className="text-4xl font-light text-white font-serif">+</span>
+            <div className="flex flex-row items-center gap-12 lg:gap-16">
+              
+              {/* Stat 01: Mastery */}
+              <div className="group/stat">
+                <div className="flex flex-col gap-0 border-r border-white/5 pr-12 lg:pr-16">
+                  <span className="text-6xl md:text-8xl font-normal leading-none text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-700">
+                    02<span className="text-2xl text-white/30 ml-1 font-serif italic">+</span>
+                  </span>
+                  <p className="text-[9px] font-black tracking-[0.4em] text-white/20 uppercase mt-2">
+                    Years Exp
+                  </p>
+                </div>
               </div>
-              <p className="text-[11px] font-black tracking-[0.6em] text-white/30 uppercase leading-relaxed">
-                Years of <br /> Technical Mastery
-              </p>
-            </div>
-            <div className="mt-8 pt-8 border-t border-white/5 flex flex-col gap-2">
-              <div className="flex items-baseline gap-2">
-                <span className="text-6xl font-black tracking-tighter leading-none text-white">20</span>
-                <span className="text-2xl font-light text-white font-serif">+</span>
+
+              {/* Stat 02: Projects */}
+              <div className="group/stat">
+                <div className="flex flex-col gap-0">
+                  <span className="text-6xl md:text-8xl font-normal leading-none text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-700">
+                    20<span className="text-2xl text-white/30 ml-1 font-serif italic">+</span>
+                  </span>
+                  <p className="text-[9px] font-black tracking-[0.4em] text-white/20 uppercase mt-2">
+                    Projects Done
+                  </p>
+                </div>
               </div>
-              <p className="text-[10px] font-black tracking-[0.6em] text-white/30 uppercase leading-relaxed">
-                Premium Projects <br /> Delivered
-              </p>
+
             </div>
+
             {/* Portfolio Brand Tag */}
-            <div className="mt-8 flex items-center gap-3 opacity-20 group">
-               <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
+            <div className="mt-12 pt-8 border-t border-white/5 flex items-center gap-3 opacity-20">
+               <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></div>
                <span className="text-[10px] font-bold tracking-widest uppercase">UA // STUDIO</span>
             </div>
           </div>
