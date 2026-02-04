@@ -62,7 +62,7 @@ const Hero = () => {
   const [row3Text, row4Text] = splitRole(typedRole);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden bg-black text-white selection:bg-white selection:text-black pt-24 md:pt-10">
+    <section id="home" className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden bg-black text-white selection:bg-white selection:text-black pt-24 pb-16 md:py-10">
       {/* BACKGROUND GRAPHIC */}
       <div className="absolute right-0 top-0 w-full lg:w-1/2 h-full z-0 pointer-events-none transition-transform duration-700 ease-out" style={{ transform: `translateX(${mousePos.x * 0.5}px) translateY(${mousePos.y * 0.5}px)` }}>
         <div className="relative w-full h-full opacity-40 lg:opacity-60 grayscale contrast-[1.1] brightness-[0.8]">
@@ -78,7 +78,7 @@ const Hero = () => {
         <div className="grow flex flex-col items-center lg:items-start text-center lg:text-left">
           
           {/* MOBILE: ONE MASSIVE LOOPING HEADLINE */}
-          <div className="md:hidden w-full flex flex-col gap-2 mb-4 mt-4 px-2">
+          <div className="md:hidden w-full flex flex-col gap-2 mb-4 mt-0 px-2">
              <span className="text-[10px] font-black tracking-[0.5em] text-white/20 uppercase">SPECIALIZATION</span>
              <h1 className="text-[14vw] font-bold tracking-tighter leading-[0.9] text-white uppercase min-h-[2em] flex flex-wrap justify-center">
                 {typedRole}
