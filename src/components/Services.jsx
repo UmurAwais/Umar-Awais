@@ -14,7 +14,7 @@ const Services = () => {
       id: '02',
       title: "CUSTOM WEB DEVELOPMENT",
       description: "Beyond templates. I build bespoke digital interfaces from the ground up, ensuring lightning-fast performance and seamless user journeys across 20+ successfully delivered projects.",
-      tags: ["Next.js", "Vite", "Tailwind CSS", "Three.js"]
+      tags: ["JavaScript", "TypeScript", "Vite", "Tailwind CSS"]
     },
     {
       id: '03',

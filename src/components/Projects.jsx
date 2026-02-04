@@ -128,57 +128,63 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* --- PROJECT GRID --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 transition-all duration-1000">
+        {/* --- PROJECT GRID (3-COLUMN PREMIUM REDESIGN) --- */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          
           {visibleProjects.map((project, index) => (
             <div 
               key={project.id} 
-              className={`group relative w-full aspect-4/3 overflow-hidden rounded-3xl md:rounded-4xl bg-neutral-900 cursor-pointer`}
+              className="group relative flex flex-col cursor-pointer"
             >
-              {/* Image with Grayscale Filter */}
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-105 group-hover:brightness-100 transition-all duration-1000 ease-out"
-              />
-
-              {/* Top Metadata Pills */}
-              <div className="absolute top-8 left-8 right-8 flex justify-between items-center opacity-0 group-hover:opacity-100 -translate-y-2.5 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                <div className="bg-white px-3 py-1 rounded-full text-black text-[10px] font-black tracking-widest uppercase">
-                    // {project.category}
+              {/* Image Canvas: High-Radius & Immersive */}
+              <div className="relative aspect-16/12 overflow-hidden rounded-[40px] md:rounded-[50px] bg-[#0A0A0A] border border-white/3 transition-all duration-700 group-hover:border-white/20 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.5)]">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-105 group-hover:brightness-100 transition-all duration-1000 ease-out"
+                />
+                
+                {/* Top Glass Tag */}
+                <div className="absolute top-6 left-6 flex items-center gap-3">
+                   <div className="px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-xl border border-white/10 text-[9px] font-black tracking-[0.4em] text-white/60 uppercase">
+                      {project.category}
+                   </div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-white text-[10px] font-bold tracking-[0.2em] uppercase">
-                    ( {project.year} )
+
+                {/* Hover Interaction Arrow */}
+                <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500">
+                   <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center shadow-2xl">
+                      <svg className="w-5 h-5 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                   </div>
                 </div>
               </div>
 
-              {/* Center Title Layout (Reference Inspired) */}
-              <div className="absolute inset-0 flex flex-col justify-end items-center pb-8 md:pb-12 px-6 md:px-10">
-                <div className="w-full flex justify-center md:justify-between items-end mb-4">
-                   <div className="bg-white px-3 py-1 rounded-full hidden lg:flex">
-                      <span className="text-black text-[9px] font-black tracking-widest uppercase">// ARCHIVE</span>
-                   </div>
-                   
-                   <h3 className="text-xl md:text-2xl lg:text-[32px] font-extrabold text-white uppercase tracking-tight md:tracking-tighter leading-none drop-shadow-2xl translate-y-2 group-hover:translate-y-0 transition-transform duration-700 text-center">
+              {/* Title & Metadata: Refined Editorial Stack */}
+              <div className="mt-8 px-4 flex flex-col gap-2">
+                <div className="flex items-center justify-between">
+                   <h3 className="text-2xl md:text-[26px] font-extrabold text-white uppercase tracking-tighter leading-none group-hover:translate-x-2 transition-transform duration-500">
                      {project.title}
                    </h3>
-
-                   <div className="bg-white px-3 py-1 rounded-full hidden lg:flex">
-                      <span className="text-black text-[9px] font-black tracking-widest uppercase">( {project.year} )</span>
-                   </div>
+                   <span className="text-[12px] font-serif italic text-white/20 group-hover:text-white transition-colors duration-500">
+                      {String(project.id).padStart(2, '0')}
+                   </span>
+                </div>
+                <div className="flex items-center gap-3 mt-1">
+                   <span className="text-[10px] font-bold tracking-[0.5em] text-white/20 uppercase">
+                      // ARCHIVE {project.year}
+                   </span>
                 </div>
               </div>
-
-              {/* Bottom Decorative Line */}
-              <div className="absolute bottom-0 left-0 h-0.5 bg-white w-0 group-hover:w-full transition-all duration-1000 ease-in-out"></div>
             </div>
           ))}
         </div>
 
         {/* --- FOOTER CTA: PATTERN MATCH BUTTON --- */}
         {!showAll && (
-          <div className="mt-12 md:mt-32 flex justify-center md:justify-start">
-            <div className="flex flex-col sm:flex-row items-center sm:items-center justify-center md:justify-start gap-6 group/cta cursor-pointer">
+          <div className="mt-12 md:mt-32 flex justify-center">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 group/cta cursor-pointer">
                 <button 
                   onClick={() => setShowAll(true)}
                   className="px-12 py-5 rounded-full bg-white text-black text-[11px] font-black tracking-[0.5em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_50px_rgba(255,255,255,0.1)] group cursor-pointer"
