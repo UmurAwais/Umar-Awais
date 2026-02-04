@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
+import Services from './components/Services'
 import TextMarquee from './components/TextMarquee'
 import ScrollToTop from './components/ScrollToTop'
 import Projects from './components/Projects'
@@ -18,6 +19,7 @@ const App = () => {
       <TextMarquee text="TRANSFORMING AGENCY" speed={40} />
       <About />
       <Projects />
+      <Services />
       <Footer />
       <ScrollToTop />
       {/* Future sections will go here */}
