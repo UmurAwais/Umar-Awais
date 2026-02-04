@@ -147,47 +147,47 @@ const Contact = () => {
                    
                    {/* Name Input */}
                    <div className="flex flex-col gap-4 group/field">
-                      <label className="text-[10px] font-black tracking-[0.3em] text-white/30 uppercase group-focus-within/field:text-white transition-colors duration-500">Your Identity</label>
-                      <div className="relative">
+                      <label className="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase group-focus-within/field:text-white transition-all duration-500 group-focus-within/field:translate-x-2">Your Identity</label>
+                      <div className="relative group">
                         <input 
                            name="name"
                            type="text" 
                            required
                            placeholder="Umar Awais"
-                           className="w-full bg-transparent border-b border-white/10 pt-2 pb-4 outline-none focus:border-white transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/5"
+                           className="w-full bg-white/[0.02] border-b border-white/10 pt-4 pb-4 px-4 outline-none focus:border-white focus:bg-white/[0.05] transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/10 rounded-t-xl"
                         />
-                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-700 group-focus-within/field:w-full"></div>
+                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-700 group-focus-within/field:w-full"></div>
                       </div>
                    </div>
 
                    {/* Email Input */}
                    <div className="flex flex-col gap-4 group/field">
-                      <label className="text-[10px] font-black tracking-[0.3em] text-white/30 uppercase group-focus-within/field:text-white transition-colors duration-500">Electronic Mail</label>
+                      <label className="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase group-focus-within/field:text-white transition-all duration-500 group-focus-within/field:translate-x-2">Electronic Mail</label>
                       <div className="relative">
                         <input 
                            name="email"
                            type="email" 
                            required
                            placeholder="hello@studio.com"
-                           className="w-full bg-transparent border-b border-white/10 pt-2 pb-4 outline-none focus:border-white transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/5"
+                           className="w-full bg-white/[0.02] border-b border-white/10 pt-4 pb-4 px-4 outline-none focus:border-white focus:bg-white/[0.05] transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/10 rounded-t-xl"
                         />
-                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-700 group-focus-within/field:w-full"></div>
+                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-700 group-focus-within/field:w-full"></div>
                       </div>
                    </div>
 
                    {/* Subject Selection Area (Visual List Style) */}
-                   <div className="md:col-span-2 flex flex-col gap-6 group/field">
-                      <label className="text-[10px] font-black tracking-[0.3em] text-white/30 uppercase">How can we assist?</label>
-                      <div className="flex flex-wrap gap-3">
+                   <div className="md:col-span-2 flex flex-col gap-8 group/field mt-4">
+                      <label className="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase">How can we assist?</label>
+                      <div className="flex flex-wrap gap-4">
                         {['Web Design', 'Development', 'Branding', 'Consultation'].map((option) => (
                           <button 
                             key={option}
                             type="button"
                             onClick={() => toggleService(option)}
-                            className={`px-6 py-2.5 rounded-full border transition-all text-[10px] font-bold tracking-widest uppercase cursor-pointer ${
+                            className={`px-8 py-3 rounded-full border transition-all text-[11px] font-black tracking-widest uppercase cursor-pointer ${
                               selectedServices.includes(option)
-                                ? 'bg-white text-black border-white'
-                                : 'border-white/10 text-white hover:border-white hover:bg-white/5'
+                                ? 'bg-white text-black border-white shadow-[0_10px_30px_rgba(255,255,255,0.2)] scale-105'
+                                : 'border-white/10 text-white/50 hover:border-white hover:text-white hover:bg-white/5'
                             }`}
                           >
                             {option}
@@ -197,17 +197,17 @@ const Contact = () => {
                    </div>
 
                    {/* Message Input */}
-                   <div className="flex flex-col gap-4 group/field md:col-span-2">
-                      <label className="text-[10px] font-black tracking-[0.3em] text-white/30 uppercase group-focus-within/field:text-white transition-colors duration-500">Project Narrative</label>
+                   <div className="flex flex-col gap-4 group/field md:col-span-2 mt-4">
+                      <label className="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase group-focus-within/field:text-white transition-all duration-500 group-focus-within/field:translate-x-2">Project Narrative</label>
                       <div className="relative">
                         <textarea 
                            name="message"
                            rows="4"
                            required
                            placeholder="Tell us about the digital world you want to create..."
-                           className="w-full bg-transparent border-b border-white/10 pt-2 pb-4 outline-none focus:border-white transition-all duration-700 text-lg font-medium text-white placeholder:text-white/5 resize-none leading-relaxed"
+                           className="w-full bg-white/[0.02] border-b border-white/10 pt-4 pb-4 px-4 outline-none focus:border-white focus:bg-white/[0.05] transition-all duration-700 text-lg font-medium text-white placeholder:text-white/10 resize-none leading-relaxed rounded-t-xl"
                         ></textarea>
-                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-700 group-focus-within/field:w-full"></div>
+                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-700 group-focus-within/field:w-full"></div>
                       </div>
                    </div>
 
