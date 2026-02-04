@@ -5,25 +5,6 @@ const Projects = () => {
   const sectionRef = useRef(null);
   const [showAll, setShowAll] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            entry.target.classList.remove('opacity-0', 'translate-y-10');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const revealElements = sectionRef.current.querySelectorAll('.reveal');
-    revealElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, [showAll]); // Re-run observer when projects are added
-
   const projectList = [
     {
       id: 1,
@@ -124,7 +105,7 @@ const Projects = () => {
         {/* --- SECTION HEADER (PATTERN SYNC) --- */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 mb-24">
           <div className="lg:col-span-8 lg:col-start-1 text-center md:text-left">
-             <div className="reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+             <div className="">
                 <span className="text-[10px] font-black tracking-[0.5em] text-white/40 uppercase block mb-8">
                    CREATIVE ARCHIVE
                 </span>
@@ -140,7 +121,7 @@ const Projects = () => {
              </div>
           </div>
           
-          <div className="lg:col-span-4 flex items-end justify-center md:justify-start lg:justify-end mt-12 lg:mt-0 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out">
+          <div className="lg:col-span-4 flex items-end justify-center md:justify-start lg:justify-end mt-12 lg:mt-0">
              <p className="max-w-75 text-[11px] font-bold tracking-widest text-white/30 uppercase leading-relaxed text-center md:text-left lg:text-right">
                 A curation of high-end digital narratives, from architectural form to technical precision.
              </p>
@@ -152,8 +133,7 @@ const Projects = () => {
           {visibleProjects.map((project, index) => (
             <div 
               key={project.id} 
-              className={`group relative w-full aspect-4/3 overflow-hidden rounded-3xl md:rounded-4xl bg-neutral-900 cursor-pointer reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out`}
-              style={{ transitionDelay: `${(index % 2) * 200 + 400}ms` }}
+              className={`group relative w-full aspect-4/3 overflow-hidden rounded-3xl md:rounded-4xl bg-neutral-900 cursor-pointer`}
             >
               {/* Image with Grayscale Filter */}
               <img 
@@ -197,7 +177,7 @@ const Projects = () => {
 
         {/* --- FOOTER CTA: PATTERN MATCH BUTTON --- */}
         {!showAll && (
-          <div className="mt-12 md:mt-32 flex justify-center md:justify-start reveal opacity-0 translate-y-10 transition-all duration-1000 delay-700 ease-out">
+          <div className="mt-12 md:mt-32 flex justify-center md:justify-start">
             <div className="flex flex-col sm:flex-row items-center sm:items-center justify-center md:justify-start gap-6 group/cta cursor-pointer">
                 <button 
                   onClick={() => setShowAll(true)}

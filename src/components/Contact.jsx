@@ -46,25 +46,6 @@ const Contact = () => {
     }
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            entry.target.classList.remove('opacity-0', 'translate-y-10');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const revealElements = sectionRef.current.querySelectorAll('.reveal');
-    revealElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section 
       id="contact" 
@@ -75,25 +56,25 @@ const Contact = () => {
         
         {/* --- SECTION HEADER (PATTERN SYNC) --- */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 mb-20 md:mb-32">
-          <div className="lg:col-span-8 lg:col-start-1">
-             <div className="reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+          <div className="lg:col-span-8 lg:col-start-1 text-center md:text-left">
+             <div className="">
                 <span className="text-[10px] font-black tracking-[0.6em] text-white/30 uppercase block mb-8">
                    CONTACT INTERFACE
                 </span>
                 <div className="relative">
-                   <h2 className="text-6xl md:text-[70px] lg:text-[80px] font-bold uppercase tracking-tighter leading-[0.85] z-10 relative">
-                      GET IN <br className="md:hidden" /> TOUCH
+                   <h2 className="text-3xl md:text-5xl lg:text-[65px] xl:text-[75px] leading-[1.1] md:leading-none font-extrabold uppercase tracking-tighter z-10 relative">
+                      GET IN TOUCH
                    </h2>
                    {/* Ghost Text Layer */}
-                   <span className="absolute -top-6 md:-top-10 -left-6 md:-left-10 text-[18vw] md:text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 transition-all duration-1000">
-                      CONTACT
+                   <span className="absolute -top-6 md:-top-10 left-1/2 -translate-x-1/2 md:left-0 md:-translate-x-2.5 text-[18vw] md:text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 transition-all duration-1000 whitespace-nowrap">
+                      GET IN TOUCH
                    </span>
                 </div>
              </div>
           </div>
           
-          <div className="lg:col-span-4 flex items-end justify-start lg:justify-end mt-10 lg:mt-0 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out">
-             <p className="max-w-75 text-[11px] font-bold tracking-widest text-white/30 uppercase leading-relaxed text-left lg:text-right">
+          <div className="lg:col-span-4 flex items-end justify-center md:justify-start lg:justify-end mt-12 lg:mt-0">
+             <p className="max-w-75 text-[11px] font-bold tracking-widest text-white/30 uppercase leading-relaxed text-center md:text-left lg:text-right">
                 Ready to transform your technical identity? Let's engineer something extraordinary together.
              </p>
           </div>
@@ -103,8 +84,8 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
            
            {/* LEFT: Contact Info */}
-           <div className="lg:col-span-5 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-500 ease-out">
-              <div className="flex flex-col gap-12">
+           <div className="lg:col-span-5">
+              <div className="flex flex-col gap-12 text-center md:text-left">
                  
                  {/* Email Slot */}
                  <div>
@@ -117,7 +98,7 @@ const Contact = () => {
                  {/* Social Slot */}
                  <div>
                     <span className="text-[10px] font-black tracking-widest text-white/20 uppercase block mb-6">Social Narrative</span>
-                    <div className="flex flex-wrap gap-4">
+                    <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                        {['Instagram', 'Dribbble', 'LinkedIn', 'Twitter'].map((social) => (
                           <a key={social} href="#" className="px-6 py-2 rounded-full border border-white/10 hover:border-white transition-all text-[11px] font-bold tracking-widest uppercase hover:bg-white/5">
                              {social}
@@ -138,7 +119,7 @@ const Contact = () => {
            </div>
 
            {/* RIGHT: Contact Form - Premium Visual Overhaul */}
-           <div className="lg:col-span-7 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-700 ease-out">
+           <div className="lg:col-span-7">
               <div className="glass-premium rounded-3xl md:rounded-[40px] p-6 md:p-12 relative overflow-hidden group/form shadow-[0_0_100px_rgba(255,255,255,0.02)]">
                 {/* Decorative Background Element */}
                 <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/5 rounded-full blur-[100px] pointer-events-none group-hover/form:bg-white/10 transition-colors duration-1000"></div>
@@ -212,17 +193,17 @@ const Contact = () => {
                    </div>
 
                    {/* Submit Button */}
-                   <div className="md:col-span-2 mt-4 flex justify-start">
-                      <div className="flex items-center gap-8 group/btn">
+                   <div className="md:col-span-2 mt-4 flex justify-center md:justify-start">
+                      <div className="flex flex-col sm:flex-row items-center gap-8 group/cta cursor-pointer">
                          <button 
                             disabled={status.submitting}
                             type="submit"
-                            className="px-16 py-6 rounded-full bg-white text-black text-[11px] font-black tracking-[0.6em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_80px_rgba(255,255,255,0.05)] cursor-pointer translate-y-0 active:scale-95 disabled:opacity-50 disabled:cursor-wait"
+                            className="w-full sm:w-auto px-16 py-6 rounded-full bg-white text-black text-[11px] font-black tracking-[0.6em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_80px_rgba(255,255,255,0.05)] cursor-pointer translate-y-0 active:scale-95 disabled:opacity-50 disabled:cursor-wait"
                          >
                             {status.submitting ? 'Transmitting...' : 'Initiate Inquiry'}
                          </button>
-                         <div className="w-16 h-16 rounded-full border border-white/20 bg-white/5 flex items-center justify-center hover:bg-white hover:text-black transition-all group-hover/btn:scale-110 cursor-pointer">
-                            <svg className="w-7 h-7 -rotate-45 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20">
+                         <div className="hidden sm:flex w-16 h-16 rounded-full border border-white/20 bg-white/5 items-center justify-center hover:bg-white hover:text-black transition-all group-hover/cta:scale-110 cursor-pointer">
+                            <svg className="w-7 h-7 -rotate-45 group-hover/cta:translate-x-1 group-hover/cta:-translate-y-1 transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20">
                                <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
                             </svg>
                          </div>

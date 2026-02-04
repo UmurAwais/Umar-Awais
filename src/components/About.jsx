@@ -4,25 +4,6 @@ import logo from '../assets/web development.png';
 const About = () => {
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            entry.target.classList.remove('opacity-0', 'translate-y-10');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const revealElements = sectionRef.current.querySelectorAll('.reveal');
-    revealElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section 
       id="about" 
@@ -32,7 +13,7 @@ const About = () => {
       <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-0">
         
         {/* --- LEFT ASSET COLUMN --- */}
-        <div className="lg:col-span-3 border-b lg:border-r lg:border-b-0 border-white/5 pb-10 lg:pb-0 lg:pr-10 flex flex-col justify-between reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+        <div className="lg:col-span-3 border-b lg:border-r lg:border-b-0 border-white/5 pb-10 lg:pb-0 lg:pr-10 flex flex-col justify-between">
           <div className="relative w-full aspect-square md:aspect-4/5 overflow-hidden rounded-3xl md:rounded-4xl bg-neutral-900 group shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" 
@@ -82,7 +63,7 @@ const About = () => {
         <div className="lg:col-span-6 px-0 md:px-16 lg:px-24 py-10 lg:py-0">
           
           {/* Header & Main Title Alignment */}
-          <div className="mb-12 md:mb-16 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out text-center md:text-left">
+          <div className="mb-12 md:mb-16 text-center md:text-left">
             <span className="text-[9px] md:text-[10px] font-black tracking-[0.5em] text-white/40 uppercase block mb-6 md:mb-10">
               ABOUT IDENTITY
             </span>
@@ -101,7 +82,7 @@ const About = () => {
           </div>
 
           {/* Indented Description Alignment */}
-          <div className="ml-0 lg:ml-20 max-w-137.5 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-500 ease-out">
+          <div className="ml-0 lg:ml-20 max-w-137.5">
              <p className="text-sm md:text-lg font-medium leading-loose md:leading-[2.4] text-white/50 mb-10 text-center md:text-left">
                 As a technical web designer with over 2 years of professional experience, I specialize in transforming complex business requirements into pixel-perfect digital ecosystems. Having successfully delivered 20+ international projects, I combine architectural precision with modern MERN stack engineering to create scalable, high-performance platforms that define market leadership.
              </p>
@@ -124,7 +105,7 @@ const About = () => {
         </div>
 
         {/* --- RIGHT ASSET FIELD --- */}
-        <div className="lg:col-span-3 flex flex-col justify-between items-end reveal opacity-0 translate-y-10 transition-all duration-1000 delay-700 ease-out">
+        <div className="lg:col-span-3 flex flex-col justify-between items-end">
           {/* Large Geometric Arrow Top-Right (Pattern Match) */}
           <div className="mt-4 lg:block hidden">
              <svg className="w-24 h-24 md:w-40 md:h-40 text-white/10 -rotate-45 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
