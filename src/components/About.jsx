@@ -94,7 +94,7 @@ const About = () => {
                 DIGITAL SOLUTIONS WITH
               </h2>
               {/* Ghost Text exactly aligned behind heading */}
-              <h3 className="absolute -bottom-6 md:-bottom-10 left-18 text-[18vw] md:text-[12vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 whitespace-nowrap ml-5">
+              <h3 className="absolute -bottom-6 md:-bottom-10 left-36 text-[18vw] md:text-[12vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 whitespace-nowrap">
                 02 YEARS EXP
               </h3>
             </div>
