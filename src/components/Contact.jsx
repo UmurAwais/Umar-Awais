@@ -94,65 +94,85 @@ const Contact = () => {
               </div>
            </div>
 
-           {/* RIGHT: Contact Form */}
+           {/* RIGHT: Contact Form - Premium Visual Overhaul */}
            <div className="lg:col-span-7 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-700 ease-out">
-              <form className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
-                 
-                 {/* Name Input */}
-                 <div className="flex flex-col gap-3 group">
-                    <label className="text-[10px] font-black tracking-widest text-white/20 uppercase group-focus-within:text-white transition-colors">Your Name</label>
-                    <input 
-                       type="text" 
-                       placeholder="Enter your name"
-                       className="bg-transparent border-b border-white/10 py-4 outline-none focus:border-white transition-colors text-white font-medium placeholder:text-white/10"
-                    />
-                 </div>
+              <div className="glass-premium rounded-[40px] p-8 md:p-12 relative overflow-hidden group/form shadow-[0_0_100px_rgba(255,255,255,0.02)]">
+                {/* Decorative Background Element */}
+                <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/5 rounded-full blur-[100px] pointer-events-none group-hover/form:bg-white/10 transition-colors duration-1000"></div>
+                
+                <form className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12 relative z-10">
+                   
+                   {/* Name Input */}
+                   <div className="flex flex-col gap-4 group/field">
+                      <label className="text-[10px] font-black tracking-[0.3em] text-white/30 uppercase group-focus-within/field:text-white transition-colors duration-500">Your Identity</label>
+                      <div className="relative">
+                        <input 
+                           type="text" 
+                           placeholder="Umar Awais"
+                           className="w-full bg-transparent border-b border-white/10 pt-2 pb-4 outline-none focus:border-white transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/5"
+                        />
+                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-700 group-focus-within/field:w-full"></div>
+                      </div>
+                   </div>
 
-                 {/* Email Input */}
-                 <div className="flex flex-col gap-3 group">
-                    <label className="text-[10px] font-black tracking-widest text-white/20 uppercase group-focus-within:text-white transition-colors">Email Address</label>
-                    <input 
-                       type="email" 
-                       placeholder="Enter your email"
-                       className="bg-transparent border-b border-white/10 py-4 outline-none focus:border-white transition-colors text-white font-medium placeholder:text-white/10"
-                    />
-                 </div>
+                   {/* Email Input */}
+                   <div className="flex flex-col gap-4 group/field">
+                      <label className="text-[10px] font-black tracking-[0.3em] text-white/30 uppercase group-focus-within/field:text-white transition-colors duration-500">Electronic Mail</label>
+                      <div className="relative">
+                        <input 
+                           type="email" 
+                           placeholder="hello@studio.com"
+                           className="w-full bg-transparent border-b border-white/10 pt-2 pb-4 outline-none focus:border-white transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/5"
+                        />
+                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-700 group-focus-within/field:w-full"></div>
+                      </div>
+                   </div>
 
-                 {/* Subject Input */}
-                 <div className="flex flex-col gap-3 group md:col-span-2">
-                    <label className="text-[10px] font-black tracking-widest text-white/20 uppercase group-focus-within:text-white transition-colors">Subject</label>
-                    <input 
-                       type="text" 
-                       placeholder="What are we building?"
-                       className="bg-transparent border-b border-white/10 py-4 outline-none focus:border-white transition-colors text-white font-medium placeholder:text-white/10"
-                    />
-                 </div>
+                   {/* Subject Selection Area (Visual List Style) */}
+                   <div className="md:col-span-2 flex flex-col gap-6 group/field">
+                      <label className="text-[10px] font-black tracking-[0.3em] text-white/30 uppercase">How can we assist?</label>
+                      <div className="flex flex-wrap gap-3">
+                        {['Web Design', 'Development', 'Branding', 'Consultation'].map((option) => (
+                          <button 
+                            key={option}
+                            type="button"
+                            className="px-6 py-2.5 rounded-full border border-white/10 hover:border-white transition-all text-[10px] font-bold tracking-widest uppercase hover:bg-white hover:text-black cursor-pointer"
+                          >
+                            {option}
+                          </button>
+                        ))}
+                      </div>
+                   </div>
 
-                 {/* Message Input */}
-                 <div className="flex flex-col gap-3 group md:col-span-2">
-                    <label className="text-[10px] font-black tracking-widest text-white/20 uppercase group-focus-within:text-white transition-colors">Budget & Message</label>
-                    <textarea 
-                       rows="4"
-                       placeholder="Tell me about your vision"
-                       className="bg-transparent border-b border-white/10 py-4 outline-none focus:border-white transition-colors text-white font-medium placeholder:text-white/10 resize-none"
-                    ></textarea>
-                 </div>
+                   {/* Message Input */}
+                   <div className="flex flex-col gap-4 group/field md:col-span-2">
+                      <label className="text-[10px] font-black tracking-[0.3em] text-white/30 uppercase group-focus-within/field:text-white transition-colors duration-500">Project Narrative</label>
+                      <div className="relative">
+                        <textarea 
+                           rows="4"
+                           placeholder="Tell us about the digital world you want to create..."
+                           className="w-full bg-transparent border-b border-white/10 pt-2 pb-4 outline-none focus:border-white transition-all duration-700 text-lg font-medium text-white placeholder:text-white/5 resize-none leading-relaxed"
+                        ></textarea>
+                        <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-700 group-focus-within/field:w-full"></div>
+                      </div>
+                   </div>
 
-                 {/* Submit Button */}
-                 <div className="md:col-span-2 mt-6 flex justify-start">
-                    <div className="flex items-center gap-6 group">
-                       <button className="px-16 py-5 rounded-full bg-white text-black text-[11px] font-black tracking-[0.5em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_50px_rgba(255,255,255,0.1)] cursor-pointer">
-                          Send Message
-                       </button>
-                       <div className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform cursor-pointer group">
-                          <svg className="w-6 h-6 -rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                             <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
-                          </svg>
-                       </div>
-                    </div>
-                 </div>
+                   {/* Submit Button */}
+                   <div className="md:col-span-2 mt-4 flex justify-start">
+                      <div className="flex items-center gap-8 group/btn">
+                         <button className="px-16 py-6 rounded-full bg-white text-black text-[11px] font-black tracking-[0.6em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_80px_rgba(255,255,255,0.05)] cursor-pointer translate-y-0 active:scale-95">
+                            Initiate Inquiry
+                         </button>
+                         <div className="w-16 h-16 rounded-full border border-white/20 bg-white/5 flex items-center justify-center hover:bg-white hover:text-black transition-all group-hover/btn:scale-110 cursor-pointer">
+                            <svg className="w-7 h-7 -rotate-45 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20">
+                               <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
+                            </svg>
+                         </div>
+                      </div>
+                   </div>
 
-              </form>
+                </form>
+              </div>
            </div>
 
         </div>
