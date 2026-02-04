@@ -66,7 +66,7 @@ const Blog = () => {
                 </span>
                 <div className="relative">
                    <h2 className="text-7xl md:text-9xl lg:text-[160px] font-normal uppercase tracking-tighter leading-[0.85] font-six-caps z-10 relative">
-                      LATEST <br /> PERSPECTIVES
+                      LATEST PERSPECTIVES
                    </h2>
                    {/* Ghost Text Layer */}
                    <span className="absolute -top-10 -left-10 text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 font-six-caps transition-all duration-1000">
@@ -113,7 +113,7 @@ const Blog = () => {
                   <span>{post.readTime}</span>
                 </div>
                 
-                <h3 className="text-3xl md:text-4xl font-normal uppercase tracking-tighter leading-none font-six-caps group-hover:text-white transition-colors duration-500">
+                <h3 className="text-5xl md:text-6xl font-normal uppercase tracking-tighter leading-[0.9] font-six-caps group-hover:text-white transition-colors duration-500">
                   {post.title}
                 </h3>
                 
@@ -131,10 +131,10 @@ const Blog = () => {
         {/* --- FOOTER CTA --- */}
         <div className="mt-32 flex justify-center reveal opacity-0 translate-y-10 transition-all duration-1000 delay-700 ease-out">
            <div className="flex items-center gap-6 group">
-              <button className="px-12 py-5 rounded-full border border-white/20 text-white text-[11px] font-black tracking-[0.5em] uppercase hover:bg-white hover:text-black transition-all shadow-[0_0_50px_rgba(255,255,255,0.05)] cursor-pointer">
+              <button className="px-12 py-5 rounded-full bg-white text-black text-[11px] font-black tracking-[0.5em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_50px_rgba(255,255,255,0.1)] group cursor-pointer">
                 View All Journal
               </button>
-              <div className="w-14 h-14 rounded-full border border-white/20 text-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all group-hover:scale-110 cursor-pointer">
+              <div className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform cursor-pointer group">
                  <svg className="w-6 h-6 -rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
                  </svg>
