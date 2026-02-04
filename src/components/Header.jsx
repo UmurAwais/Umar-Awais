@@ -62,14 +62,14 @@ const Header = () => {
 
       <div className={`w-full px-6 py-6 md:px-12 flex items-center justify-between transition-all duration-700 ${isScrolled ? 'translate-y-3 scale-[0.97]' : ''}`}>
         
-        {/* LOGO - Redined with Asset Image */}
-        <div className="flex-1 pointer-events-auto">
+        {/* LOGO - Refined with Asset Image */}
+        <div className="flex-none pointer-events-auto">
           <a 
             href="#home" 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="group flex items-center gap-4 cursor-pointer"
           >
-            <div className="w-12 h-12 glass-premium rounded-full flex items-center justify-center transition-all duration-500 overflow-hidden group-hover:bg-white border border-white/10 group-hover:border-transparent">
+            <div className="w-10 h-10 md:w-12 md:h-12 glass-premium rounded-full flex items-center justify-center transition-all duration-500 overflow-hidden group-hover:bg-white border border-white/10 group-hover:border-transparent">
               <img src={logo} alt="Umar Awais Logo" className="w-full h-full object-cover rounded-full transition-all duration-500" />
             </div>
             <div className="hidden lg:flex flex-col">
@@ -108,30 +108,31 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* CTA - The Signature Button */}
-        <div className="flex-1 flex justify-end pointer-events-auto">
+        {/* ACTIONS: CTA + MOBILE CONTROLS */}
+        <div className="flex items-center gap-3 md:gap-6 pointer-events-auto">
+          {/* CTA - The Signature Button */}
           <button 
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group relative px-10 py-4 bg-white text-black text-[12px] font-extrabold tracking-tight rounded-full overflow-hidden shimmer-premium active:scale-95 transition-all duration-500 cursor-pointer shadow-[0_15px_35px_rgba(255,255,255,0.15)]"
+            className="group relative px-6 md:px-10 py-3 md:py-4 bg-white text-black text-[10px] md:text-[12px] font-extrabold tracking-tight rounded-full overflow-hidden shimmer-premium active:scale-95 transition-all duration-500 cursor-pointer shadow-[0_15px_35px_rgba(255,255,255,0.15)] whitespace-nowrap"
           >
-            <div className="relative z-10 flex items-center gap-3">
+            <div className="relative z-10 flex items-center gap-2 md:gap-3">
               <span>HIRE ME</span>
-              <div className="w-2 h-2 rounded-full bg-black group-hover:scale-125 transition-transform duration-500"></div>
+              <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-black group-hover:scale-125 transition-transform duration-500"></div>
+            </div>
+          </button>
+
+          {/* MOBILE CONTROLS */}
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-3 md:p-4 glass-premium rounded-2xl cursor-pointer group z-200"
+          >
+            <div className="flex flex-col gap-1.5">
+              <div className={`w-6 md:w-8 h-0.5 bg-white transition-all transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
+              <div className={`w-6 md:w-8 h-0.5 bg-white transition-all ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
+              <div className={`w-6 md:w-8 h-0.5 bg-white transition-all transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
             </div>
           </button>
         </div>
-
-        {/* MOBILE CONTROLS */}
-        <button 
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden pointer-events-auto p-4 glass-premium rounded-2xl cursor-pointer group z-200"
-        >
-          <div className="flex flex-col gap-1.5">
-            <div className={`w-8 h-0.5 bg-white transition-all transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
-            <div className={`w-8 h-0.5 bg-white transition-all ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
-            <div className={`w-8 h-0.5 bg-white transition-all transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
-          </div>
-        </button>
       </div>
 
       {/* MOBILE MENU OVERLAY */}
