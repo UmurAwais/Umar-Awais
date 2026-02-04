@@ -44,11 +44,20 @@ const About = () => {
           <div className="mt-12 pt-10 border-t border-white/10">
             <div className="flex flex-col gap-2">
               <div className="flex items-baseline gap-2">
-                <span className="text-8xl font-black tracking-tighter leading-none text-white">05</span>
+                <span className="text-8xl font-black tracking-tighter leading-none text-white">02</span>
                 <span className="text-4xl font-light text-white font-serif">+</span>
               </div>
               <p className="text-[11px] font-black tracking-[0.6em] text-white/30 uppercase leading-relaxed">
-                Years of <br /> Design Protocol
+                Years of <br /> Technical Mastery
+              </p>
+            </div>
+            <div className="mt-8 pt-8 border-t border-white/5 flex flex-col gap-2">
+              <div className="flex items-baseline gap-2">
+                <span className="text-6xl font-black tracking-tighter leading-none text-white">20</span>
+                <span className="text-2xl font-light text-white font-serif">+</span>
+              </div>
+              <p className="text-[10px] font-black tracking-[0.6em] text-white/30 uppercase leading-relaxed">
+                Premium Projects <br /> Delivered
               </p>
             </div>
             {/* Portfolio Brand Tag */}
@@ -71,13 +80,13 @@ const About = () => {
               <h2 
                 className="text-4xl md:text-5xl lg:text-[75px] xl:text-[90px] leading-none font-bold tracking-tighter uppercase z-10 relative"
               >
-                CRAFTING HIGH-END <br /> 
-                GHOST NARRATIVES 
-                THROUGH
+                ENGINEERING HIGH-END <br /> 
+                DIGITAL SOLUTIONS 
+                WTIH
               </h2>
               {/* Ghost Text exactly aligned behind heading */}
               <span className="absolute -bottom-10 left-0 text-[12vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 font-serif italic whitespace-nowrap">
-                GHOST PROJECTS
+                02 YEARS EXP
               </span>
             </div>
           </div>
@@ -85,7 +94,7 @@ const About = () => {
           {/* Indented Description Alignment */}
           <div className="ml-0 lg:ml-20 max-w-137.5 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-500 ease-out">
              <p className="text-sm md:text-lg font-medium leading-[2.4] text-white/50 mb-10 text-left">
-                In my studio, we have a specialized team range of expertise in different areas of digital technology. This means that your identity will be able to access a broad range of technical precision that you may not have in-house. Millions of pixels have been crafted from all over the world.
+                As a technical web designer with over 2 years of professional experience, I specialize in transforming complex business requirements into pixel-perfect digital ecosystems. Having successfully delivered 20+ international projects, I combine architectural precision with modern MERN stack engineering to create scalable, high-performance platforms that define market leadership.
              </p>
              
              {/* Action Button Pattern Match */}

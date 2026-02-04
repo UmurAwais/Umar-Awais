@@ -87,18 +87,18 @@ const Hero = () => {
           <div className="flex flex-col xl:flex-row items-center lg:items-start gap-12 xl:gap-20">
             {/* Stats Block */}
             <div className="flex items-center gap-10 md:gap-14 md:pr-14 border-b md:border-b-0 md:border-r border-white/10 pb-10 md:pb-0">
-               <div className="flex flex-col items-center lg:items-start">
-                  <span className="text-3xl md:text-5xl font-bold text-white tracking-tighter">#983</span>
-                  <span className="text-[9px] font-bold tracking-[0.3em] text-white/20 uppercase mt-2">VOL ID</span>
+               <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+                  <span className="text-3xl md:text-5xl font-bold text-white tracking-tighter">02+</span>
+                  <span className="text-[9px] font-bold tracking-[0.3em] text-white/20 uppercase mt-2">YEARS EXP</span>
                </div>
-               <div className="flex flex-col items-center lg:items-start">
-                  <span className="text-3xl md:text-5xl font-bold text-white tracking-tighter">K</span>
-                  <span className="text-[9px] font-bold tracking-[0.3em] text-white/20 uppercase mt-2">CAPACITY</span>
+               <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+                  <span className="text-3xl md:text-5xl font-bold text-white tracking-tighter">20+</span>
+                  <span className="text-[9px] font-bold tracking-[0.3em] text-white/20 uppercase mt-2">PRJ DONE</span>
                </div>
             </div>
             {/* Paragraph Text */}
             <p className="text-sm md:text-base lg:text-[17px] font-medium leading-[2.2] text-white/70 max-w-125">
-               I am a <strong className="text-white font-bold tracking-tight">Professional Digital Designer and Front-End Developer.</strong> This architectural space explores minimalist digital works and structural interfaces crafted across several years.
+               I am a <strong className="text-white font-bold tracking-tight text-center lg:text-left">Technical Web Designer and MERN Stack Engineer.</strong> Over the last 02 years, I have successfully delivered 20+ premium digital ecosystems, bridging the gap between high-end aesthetics and architectural precision.
             </p>
           </div>
         </div>

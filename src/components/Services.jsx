@@ -26,32 +26,32 @@ const Services = () => {
     {
       id: '01',
       title: "MERN STACK DEVELOPMENT",
-      description: "Building scalable, high-performance full-stack applications with React, Node.js, and MongoDB for complex business logic.",
-      tags: ["React", "Express", "Node.js", "MongoDB"]
+      description: "Engineering robust, full-stack applications with architectural precision. Leveraging 2 years of MERN expertise to build scalable, high-performance web ecosystems that drive business growth.",
+      tags: ["React.js", "Express", "Node.js", "MongoDB"]
     },
     {
       id: '02',
-      title: "WEB DEVELOPMENT",
-      description: "Architecture-first front-end development using modern frameworks to create lightning-fast, responsive user experiences.",
-      tags: ["Vite", "Next.js", "Three.js", "Tailwind"]
+      title: "CUSTOM WEB DEVELOPMENT",
+      description: "Beyond templates. I build bespoke digital interfaces from the ground up, ensuring lightning-fast performance and seamless user journeys across 20+ successfully delivered projects.",
+      tags: ["Next.js", "Vite", "Tailwind CSS", "Three.js"]
     },
     {
       id: '03',
-      title: "WORDPRESS ECOSYSTEMS",
-      description: "Enterprise-level WordPress solutions, from custom theme architecture to complex plugin integrations and optimization.",
-      tags: ["PHP", "Custom Themes", "Elementor", "WooCommerce"]
+      title: "WORDPRESS ARCHITECTURE",
+      description: "Transforming WordPress into a high-performance engine. Specializing in custom theme development and complex plugin integrations for enterprise-level scalability and ease of management.",
+      tags: ["PHP", "Custom Hooks", "Theme Dev", "ACF Pro"]
     },
     {
       id: '04',
-      title: "SHOPIFY DEVELOPMENT",
-      description: "Elite e-commerce engineering, creating high-converting Shopify stores with bespoke Liquid themes and app integrations.",
-      tags: ["Liquid", "Store Front", "E-commerce", "Conversion"]
+      title: "SHOPIFY ENGINEERING",
+      description: "Creating high-converting e-commerce narratives. From custom Liquid implementation to strategic store optimization, I build Shopify stores that don't just look good—they sell.",
+      tags: ["Liquid", "E-commerce SEO", "CRO", "Theme Studio"]
     },
     {
       id: '05',
-      title: "UI/UX STRATEGY",
-      description: "Transforming complex requirements into intuitive digital narratives through precision wireframing and interactive prototyping.",
-      tags: ["Figma", "Design Systems", "Prototyping", "UX"]
+      title: "UI/UX DESIGN STRATEGY",
+      description: "Synthesizing visual aesthetics with technical feasibility. I design intuitive, user-centric interfaces that bridge the gap between human interaction and architectural precision.",
+      tags: ["Figma", "Design Systems", "Prototyping", "UX Audit"]
     }
   ];
 
