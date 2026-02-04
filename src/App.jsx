@@ -18,7 +18,7 @@ const App = () => {
       
       <Header />
       <Hero />
-      <TextMarquee text="TRANSFORMING AGENCY" speed={40} />
+      <TextMarquee text="ENGINEERING DIGITAL ECOSYSTEMS" speed={40} />
       <About />
       <Projects />
       <Services />

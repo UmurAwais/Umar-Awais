@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TextMarquee = ({ text = "TRANSFORMING IDENTITY", speed = 30 }) => {
+const TextMarquee = ({ text = "FULL-STACK INFRASTRUCTURE", speed = 30 }) => {
   return (
     <div className="relative w-full overflow-hidden bg-black py-6 md:py-8 border-y border-white/5 flex items-center">
       <div className="flex whitespace-nowrap animate-marquee">
