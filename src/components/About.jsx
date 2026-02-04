@@ -42,7 +42,7 @@ const About = () => {
           </div>
           
           <div className="mt-8 md:mt-12 pt-8 md:pt-10 border-t border-white/10">
-            <div className="flex flex-row flex-wrap items-center gap-8 md:gap-12 lg:gap-16 text-center justify-center">
+            <div className="flex flex-row flex-wrap items-center gap-8 md:gap-12 lg:gap-16 justify-center lg:justify-start">
               
               {/* Stat 01: Mastery */}
               <div className="group/stat">
@@ -71,10 +71,10 @@ const About = () => {
             </div>
 
             {/* Portfolio Brand Tag */}
-            {/* <div className="mt-12 pt-8 border-t border-white/5 flex items-center gap-3 opacity-20">
+            <div className="mt-12 pt-8 border-t border-white/5 hidden lg:flex items-center gap-3 opacity-20">
                <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></div>
-               <span className="text-[10px] font-bold tracking-widest uppercase">Umar Awais</span>
-            </div> */}
+               <span className="text-[10px] font-bold tracking-widest uppercase">UA // IDENTITY</span>
+            </div>
           </div>
         </div>
 
@@ -82,16 +82,16 @@ const About = () => {
         <div className="lg:col-span-6 px-0 md:px-16 lg:px-24 py-10 lg:py-0">
           
           {/* Header & Main Title Alignment */}
-          <div className="mb-12 md:mb-16 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out text-center">
+          <div className="mb-12 md:mb-16 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out text-center md:text-left">
             <span className="text-[9px] md:text-[10px] font-black tracking-[0.5em] text-white/40 uppercase block mb-6 md:mb-10">
               ABOUT IDENTITY
             </span>
             <div className="relative">
               <h2 
-                className="text-3xl md:text-5xl lg:text-[65px] xl:text-[75px] leading-[1.1] md:leading-none font-bold tracking-tighter uppercase z-10 relative text-center md:text-left"
+                className="text-3xl md:text-5xl lg:text-[65px] xl:text-[75px] leading-[1.1] md:leading-none font-extrabold tracking-tighter uppercase z-10 relative text-center md:text-left"
               >
-                ENGINEERING HIGH-END <br className="hidden md:block" /> 
-                DIGITAL SOLUTIONS WITH
+                ENGINEERING <br className="hidden md:block" /> 
+                DIGITAL EXCELLENCE
               </h2>
               {/* Ghost Text exactly aligned behind heading */}
               <h3 className="absolute -bottom-6 md:-bottom-10 left-0 text-[18vw] md:text-[12vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 whitespace-nowrap">
@@ -102,7 +102,7 @@ const About = () => {
 
           {/* Indented Description Alignment */}
           <div className="ml-0 lg:ml-20 max-w-137.5 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-500 ease-out">
-             <p className="text-sm md:text-lg font-medium leading-[2.0] md:leading-[2.4] text-white/50 mb-10 text-center md:text-left">
+             <p className="text-sm md:text-lg font-medium leading-loose md:leading-[2.4] text-white/50 mb-10 text-center md:text-left">
                 As a technical web designer with over 2 years of professional experience, I specialize in transforming complex business requirements into pixel-perfect digital ecosystems. Having successfully delivered 20+ international projects, I combine architectural precision with modern MERN stack engineering to create scalable, high-performance platforms that define market leadership.
              </p>
              
@@ -126,7 +126,7 @@ const About = () => {
         {/* --- RIGHT ASSET FIELD --- */}
         <div className="lg:col-span-3 flex flex-col justify-between items-end reveal opacity-0 translate-y-10 transition-all duration-1000 delay-700 ease-out">
           {/* Large Geometric Arrow Top-Right (Pattern Match) */}
-          <div className="mt-4">
+          <div className="mt-4 lg:block hidden">
              <svg className="w-24 h-24 md:w-40 md:h-40 text-white/10 -rotate-45 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
              </svg>

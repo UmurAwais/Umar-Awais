@@ -62,7 +62,7 @@ const Hero = () => {
   const [row3Text, row4Text] = splitRole(typedRole);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden bg-black text-white selection:bg-white selection:text-black pt-24 pb-16 md:py-10">
+    <section id="home" className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden bg-black text-white selection:bg-white selection:text-black pt-24 lg:pt-32 pb-16 md:py-10">
       {/* BACKGROUND GRAPHIC */}
       <div className="absolute right-0 top-0 w-full lg:w-1/2 h-full z-0 pointer-events-none transition-transform duration-700 ease-out" style={{ transform: `translateX(${mousePos.x * 0.5}px) translateY(${mousePos.y * 0.5}px)` }}>
         <div className="relative w-full h-full opacity-40 lg:opacity-60 grayscale contrast-[1.1] brightness-[0.8]">
@@ -77,43 +77,13 @@ const Hero = () => {
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
         <div className="grow flex flex-col items-center lg:items-start text-center lg:text-left">
           
-          {/* MOBILE: ONE MASSIVE LOOPING HEADLINE */}
-          <div className="md:hidden w-full flex flex-col gap-2 mb-4 mt-0 px-2">
+          {/* UNIFIED SINGLE ROW LOOPING HEADLINE (ALL DEVICES) */}
+          <div className="w-full flex flex-col gap-2 mb-8 md:mb-12 mt-0 px-2 items-center lg:items-start">
              <span className="text-[10px] font-black tracking-[0.5em] text-white/20 uppercase">SPECIALIZATION</span>
-             <h1 className="text-[14vw] font-bold tracking-tighter leading-[0.9] text-white uppercase min-h-[2em] flex flex-wrap justify-center">
+             <h1 className="text-[14vw] md:text-[8vw] lg:text-[80px] xl:text-[90px] font-extrabold tracking-tighter leading-[0.9] md:leading-[1.1] text-white uppercase min-h-[2em] md:min-h-[1.5em] flex flex-wrap justify-center lg:justify-start">
                 {typedRole}
-                <span className="w-1.5 h-[12vw] bg-white ml-2 animate-pulse"></span>
+                <span className="w-1.5 h-[12vw] md:h-[10vw] lg:h-24 bg-white ml-4 animate-pulse"></span>
              </h1>
-          </div>
-
-          {/* DESKTOP/TABLET/LAPTOP: ORIGINAL EDITORIAL 2-ROW TYPOGRAPHY */}
-          <div className="hidden md:flex flex-col gap-6 md:gap-4 mb-20 mt-10 md:mt-8">
-            
-            {/* Row 1: Technical Designer & */}
-            <div className="flex flex-col items-center lg:items-end lg:flex-row justify-center lg:justify-start gap-2 md:gap-10">
-              <div className="flex items-center gap-3 md:gap-8">
-                <h1 className="text-[8vw] lg:text-[100px] xl:text-[120px] font-bold tracking-tighter leading-[0.85] text-white uppercase">
-                  Technical Designer
-                </h1>
-                <div className="flex w-20 md:w-20 lg:w-28 lg:h-28 rounded-full border-2 md:border-3 border-white items-center justify-center shrink-0">
-                  <span className="text-xl md:text-3xl lg:text-6xl font-light">&</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Row 2: Full-Stack Engineer with Pill */}
-            <div className="flex flex-col items-center lg:items-end lg:flex-row justify-center lg:justify-start gap-3 md:gap-x-3">
-              <div className="flex items-center gap-3 md:gap-6">
-                 <h1 className="text-[8vw] lg:text-[100px] xl:text-[120px] font-bold tracking-tighter leading-[0.85] text-white uppercase">
-                    Full Stack
-                 </h1>
-                 <div className="w-40 lg:w-20 h-16 lg:h-7 rounded-full border-2 md:border-3 border-white shadow-[0_0_50px_rgba(255,255,255,0.1)] shrink-0"></div>
-              </div>
-              <h1 className="text-[8vw] lg:text-[100px] xl:text-[120px] font-bold tracking-tighter leading-[0.85] text-white uppercase">
-                Engineer
-              </h1>
-            </div>
-
           </div>
 
           {/* STATS & INFO SECTION */}
