@@ -123,25 +123,25 @@ const Projects = () => {
         
         {/* --- SECTION HEADER (PATTERN SYNC) --- */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 mb-24">
-          <div className="lg:col-span-8 lg:col-start-1">
+          <div className="lg:col-span-8 lg:col-start-1 text-center md:text-left">
              <div className="reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out">
                 <span className="text-[10px] font-black tracking-[0.5em] text-white/40 uppercase block mb-8">
                    CREATIVE ARCHIVE
                 </span>
                 <div className="relative">
-                   <h2 className="text-6xl md:text-9xl lg:text-[80px] font-bold uppercase tracking-tighter leading-[0.85] z-10 relative">
+                   <h2 className="text-3xl md:text-5xl lg:text-[65px] xl:text-[75px] leading-[1.1] md:leading-none font-extrabold uppercase tracking-tighter z-10 relative text-center md:text-left">
                       SELECTED PROJECTS
                    </h2>
                    {/* Ghost Text Layer */}
-                   <span className="absolute -top-6 md:-top-10 -left-6 md:-left-10 text-[18vw] md:text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 transition-all duration-1000">
+                   <span className="absolute -top-6 md:-top-10 left-1/2 -translate-x-1/2 md:left-0 md:-translate-x-2.5 text-[18vw] md:text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 transition-all duration-1000 whitespace-nowrap">
                       PROJECTS
                    </span>
                 </div>
              </div>
           </div>
           
-          <div className="lg:col-span-4 flex items-end justify-start lg:justify-end mt-10 lg:mt-0 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out">
-             <p className="max-w-75 text-[11px] font-bold tracking-widest text-white/30 uppercase leading-relaxed text-left lg:text-right">
+          <div className="lg:col-span-4 flex items-end justify-center md:justify-start lg:justify-end mt-12 lg:mt-0 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out">
+             <p className="max-w-75 text-[11px] font-bold tracking-widest text-white/30 uppercase leading-relaxed text-center md:text-left lg:text-right">
                 A curation of high-end digital narratives, from architectural form to technical precision.
              </p>
           </div>
@@ -152,7 +152,7 @@ const Projects = () => {
           {visibleProjects.map((project, index) => (
             <div 
               key={project.id} 
-              className={`group relative w-full aspect-4/3 overflow-hidden bg-neutral-900 cursor-pointer reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out`}
+              className={`group relative w-full aspect-4/3 overflow-hidden rounded-3xl md:rounded-4xl bg-neutral-900 cursor-pointer reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out`}
               style={{ transitionDelay: `${(index % 2) * 200 + 400}ms` }}
             >
               {/* Image with Grayscale Filter */}
@@ -173,13 +173,13 @@ const Projects = () => {
               </div>
 
               {/* Center Title Layout (Reference Inspired) */}
-              <div className="absolute inset-0 flex flex-col justify-end items-center pb-12 px-10">
-                <div className="w-full flex justify-between items-end mb-4">
+              <div className="absolute inset-0 flex flex-col justify-end items-center pb-8 md:pb-12 px-6 md:px-10">
+                <div className="w-full flex justify-center md:justify-between items-end mb-4">
                    <div className="bg-white px-3 py-1 rounded-full hidden lg:flex">
-                      <span className="text-black text-[9px] font-black tracking-widest uppercase">// Photo</span>
+                      <span className="text-black text-[9px] font-black tracking-widest uppercase">// ARCHIVE</span>
                    </div>
                    
-                   <h3 className="text-4xl md:text-[30px] lg:text-[40px] font-bold text-white uppercase tracking-tighter leading-none drop-shadow-2xl translate-y-2 group-hover:translate-y-0 transition-transform duration-700">
+                   <h3 className="text-xl md:text-2xl lg:text-[32px] font-extrabold text-white uppercase tracking-tight md:tracking-tighter leading-none drop-shadow-2xl translate-y-2 group-hover:translate-y-0 transition-transform duration-700 text-center">
                      {project.title}
                    </h3>
 
@@ -197,8 +197,8 @@ const Projects = () => {
 
         {/* --- FOOTER CTA: PATTERN MATCH BUTTON --- */}
         {!showAll && (
-          <div className="mt-32 flex justify-center reveal opacity-0 translate-y-10 transition-all duration-1000 delay-700 ease-out">
-            <div className="flex items-center gap-6">
+          <div className="mt-12 md:mt-32 flex justify-center md:justify-start reveal opacity-0 translate-y-10 transition-all duration-1000 delay-700 ease-out">
+            <div className="flex flex-col sm:flex-row items-center sm:items-center justify-center md:justify-start gap-6 group/cta cursor-pointer">
                 <button 
                   onClick={() => setShowAll(true)}
                   className="px-12 py-5 rounded-full bg-white text-black text-[11px] font-black tracking-[0.5em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_50px_rgba(255,255,255,0.1)] group cursor-pointer"
@@ -207,7 +207,7 @@ const Projects = () => {
                 </button>
                 <div 
                   onClick={() => setShowAll(true)}
-                  className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform cursor-pointer group"
+                  className="hidden sm:flex w-14 h-14 rounded-full bg-white text-black items-center justify-center hover:scale-110 transition-transform cursor-pointer group"
                 >
                   <svg className="w-6 h-6 -rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
