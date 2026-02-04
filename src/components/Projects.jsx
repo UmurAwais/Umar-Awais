@@ -129,11 +129,11 @@ const Projects = () => {
                    CREATIVE ARCHIVE
                 </span>
                 <div className="relative">
-                   <h2 className="text-7xl md:text-9xl lg:text-[180px] font-normal uppercase tracking-tighter leading-[0.85] font-six-caps z-10 relative">
+                   <h2 className="text-6xl md:text-9xl lg:text-[80px] font-normal uppercase tracking-tighter leading-[0.85] z-10 relative">
                       SELECTED PROJECTS
                    </h2>
                    {/* Ghost Text Layer */}
-                   <span className="absolute -top-10 -left-10 text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 font-six-caps transition-all duration-1000 group-hover:translate-x-10">
+                   <span className="absolute -top-6 md:-top-10 -left-6 md:-left-10 text-[18vw] md:text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 font-serif italic transition-all duration-1000 group-hover:translate-x-10">
                       PROJECTS
                    </span>
                 </div>
@@ -179,7 +179,7 @@ const Projects = () => {
                       <span className="text-black text-[9px] font-black tracking-widest uppercase">// Photo</span>
                    </div>
                    
-                   <h3 className="text-5xl md:text-7xl lg:text-8xl font-normal text-white uppercase tracking-tighter leading-none font-six-caps drop-shadow-2xl translate-y-2 group-hover:translate-y-0 transition-transform duration-700">
+                   <h3 className="text-4xl md:text-[60px] lg:text-[70px] font-normal text-white uppercase tracking-tighter leading-none drop-shadow-2xl translate-y-2 group-hover:translate-y-0 transition-transform duration-700">
                      {project.title}
                    </h3>
 
@@ -219,11 +219,6 @@ const Projects = () => {
 
       </div>
       
-      <style>{`
-        .font-six-caps {
-          font-family: 'Six Caps', sans-serif;
-        }
-      `}</style>
     </section>
   );
 };

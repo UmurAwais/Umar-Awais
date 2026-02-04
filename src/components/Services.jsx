@@ -71,11 +71,11 @@ const Services = () => {
                    SERVICE ARCHITECTURE
                 </span>
                 <div className="relative">
-                   <h2 className="text-7xl md:text-9xl lg:text-[160px] font-normal uppercase tracking-tighter leading-[0.85] font-six-caps z-10 relative">
-                      CRAFTING DIGITAL CAPABILITIES
+                   <h2 className="text-6xl md:text-[70px] lg:text-[80px] font-normal uppercase tracking-tighter leading-[0.85] z-10 relative">
+                      CRAFTING DIGITAL <br className="md:hidden" /> CAPABILITIES
                    </h2>
                    {/* Ghost Text Layer */}
-                   <span className="absolute -top-10 -left-10 text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 font-six-caps transition-all duration-1000">
+                   <span className="absolute -top-6 md:-top-10 -left-6 md:-left-10 text-[18vw] md:text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 transition-all duration-1000">
                       SERVICES
                    </span>
                 </div>
@@ -101,16 +101,16 @@ const Services = () => {
                 
                 {/* ID & Index */}
                 <div className="lg:col-span-1">
-                  <span className="text-xl font-serif italic text-white/20 group-hover:text-white transition-colors duration-500">
-                    {service.id}
-                  </span>
+                   <span className="text-lg md:text-xl font-serif italic text-white/20 group-hover:text-white transition-colors duration-500">
+                     {service.id}
+                   </span>
                 </div>
 
                 {/* Title */}
                 <div className="lg:col-span-5">
-                  <h3 className="text-5xl md:text-7xl lg:text-8xl font-normal uppercase tracking-tighter leading-none font-six-caps group-hover:translate-x-4 transition-transform duration-700">
-                    {service.title}
-                  </h3>
+                   <h3 className="text-4xl md:text-[70px] lg:text-[70px] font-normal uppercase tracking-tighter leading-none group-hover:translate-x-4 transition-transform duration-700">
+                     {service.title}
+                   </h3>
                 </div>
 
                 {/* Description & Tags */}
@@ -139,11 +139,6 @@ const Services = () => {
 
       </div>
       
-      <style>{`
-        .font-six-caps {
-          font-family: 'Six Caps', sans-serif;
-        }
-      `}</style>
     </section>
   );
 };

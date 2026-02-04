@@ -5,6 +5,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,6 +44,14 @@ const Header = () => {
     { label: 'Contact', id: 'contact' },
   ];
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full z-100 pointer-events-none transition-all duration-700">
       {/* Scroll Progress Detail */}
@@ -80,7 +89,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => scrollToSection(item.id)}
                 className={`relative px-6 py-3 rounded-full text-[13px] font-bold tracking-tight transition-all duration-500 cursor-pointer group flex items-center gap-1.5 ${
                   activeTab === item.id 
                     ? 'text-black bg-white shadow-xl' 
@@ -113,12 +122,44 @@ const Header = () => {
         </div>
 
         {/* MOBILE CONTROLS */}
-        <button className="md:hidden pointer-events-auto p-4 glass-premium rounded-2xl cursor-pointer group">
+        <button 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden pointer-events-auto p-4 glass-premium rounded-2xl cursor-pointer group z-200"
+        >
           <div className="flex flex-col gap-1.5">
-            <div className="w-8 h-0.5 bg-white transition-all transform group-hover:translate-x-1"></div>
-            <div className="w-8 h-0.5 bg-white transition-all"></div>
+            <div className={`w-8 h-0.5 bg-white transition-all transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
+            <div className={`w-8 h-0.5 bg-white transition-all ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
+            <div className={`w-8 h-0.5 bg-white transition-all transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
           </div>
         </button>
+      </div>
+
+      {/* MOBILE MENU OVERLAY */}
+      <div className={`fixed inset-0 bg-black z-150 transition-all duration-700 pointer-events-auto md:hidden ${isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}>
+         <div className="flex flex-col items-center justify-center h-full gap-8">
+            <span className="text-[10px] font-black tracking-[0.5em] text-white/20 uppercase mb-4">NAVIGATION</span>
+            {navItems.map((item, index) => (
+               <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-5xl font-normal uppercase tracking-tighter leading-none transition-all duration-500 ${
+                    activeTab === item.id ? 'text-white' : 'text-white/30'
+                  }`}
+                  style={{ transitionDelay: `${index * 50}ms` }}
+               >
+                  {item.label}
+               </button>
+            ))}
+            
+            <div className="mt-12 flex flex-col items-center gap-6">
+               <span className="text-[10px] font-black tracking-[0.5em] text-white/10 uppercase">SOCIAL CHANNELS</span>
+               <div className="flex gap-8">
+                  {['IG', 'LI', 'GH'].map(s => (
+                     <a key={s} href="#" className="text-sm font-bold text-white/30 hover:text-white transition-colors">{s}</a>
+                  ))}
+               </div>
+            </div>
+         </div>
       </div>
     </header>
   );

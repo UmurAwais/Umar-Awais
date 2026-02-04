@@ -81,11 +81,11 @@ const Contact = () => {
                    CONTACT INTERFACE
                 </span>
                 <div className="relative">
-                   <h2 className="text-7xl md:text-9xl lg:text-[160px] font-normal uppercase tracking-tighter leading-[0.85] font-six-caps z-10 relative">
-                      GET IN TOUCH
+                   <h2 className="text-6xl md:text-[70px] lg:text-[80px] font-normal uppercase tracking-tighter leading-[0.85] z-10 relative">
+                      GET IN <br className="md:hidden" /> TOUCH
                    </h2>
                    {/* Ghost Text Layer */}
-                   <span className="absolute -top-10 -left-10 text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 font-six-caps transition-all duration-1000">
+                   <span className="absolute -top-6 md:-top-10 -left-6 md:-left-10 text-[18vw] md:text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 transition-all duration-1000">
                       CONTACT
                    </span>
                 </div>
@@ -108,8 +108,8 @@ const Contact = () => {
                  
                  {/* Email Slot */}
                  <div>
-                    <span className="text-[10px] font-black tracking-widest text-white/20 uppercase block mb-4">Email Address</span>
-                    <a href="mailto:umarawais.pk@outlook.com" className="text-2xl md:text-3xl font-bold hover:text-white/70 transition-colors border-b border-white/10 pb-2">
+                    <span className="text-[9px] md:text-[10px] font-black tracking-widest text-white/20 uppercase block mb-3 md:mb-4">Email Address</span>
+                    <a href="mailto:umarawais.pk@outlook.com" className="text-xl md:text-3xl font-bold hover:text-white/70 transition-colors border-b border-white/10 pb-2 break-all">
                        umarawais.pk@outlook.com
                     </a>
                  </div>
@@ -139,7 +139,7 @@ const Contact = () => {
 
            {/* RIGHT: Contact Form - Premium Visual Overhaul */}
            <div className="lg:col-span-7 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-700 ease-out">
-              <div className="glass-premium rounded-[40px] p-8 md:p-12 relative overflow-hidden group/form shadow-[0_0_100px_rgba(255,255,255,0.02)]">
+              <div className="glass-premium rounded-3xl md:rounded-[40px] p-6 md:p-12 relative overflow-hidden group/form shadow-[0_0_100px_rgba(255,255,255,0.02)]">
                 {/* Decorative Background Element */}
                 <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/5 rounded-full blur-[100px] pointer-events-none group-hover/form:bg-white/10 transition-colors duration-1000"></div>
                 
@@ -249,11 +249,6 @@ const Contact = () => {
 
       </div>
       
-      <style>{`
-        .font-six-caps {
-          font-family: 'Six Caps', sans-serif;
-        }
-      `}</style>
     </section>
   );
 };

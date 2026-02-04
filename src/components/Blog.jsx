@@ -65,11 +65,11 @@ const Blog = () => {
                    THOUGHT LEADERSHIP
                 </span>
                 <div className="relative">
-                   <h2 className="text-7xl md:text-9xl lg:text-[160px] font-normal uppercase tracking-tighter leading-[0.85] font-six-caps z-10 relative">
-                      LATEST PERSPECTIVES
+                   <h2 className="text-6xl md:text-[70px] lg:text-[80px] font-normal uppercase tracking-tighter leading-[0.85] z-10 relative">
+                      LATEST <br className="md:hidden" /> PERSPECTIVES
                    </h2>
                    {/* Ghost Text Layer */}
-                   <span className="absolute -top-10 -left-10 text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 font-six-caps transition-all duration-1000">
+                   <span className="absolute -top-6 md:-top-10 -left-6 md:-left-10 text-[18vw] md:text-[15vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 transition-all duration-1000">
                       JOURNAL
                    </span>
                 </div>
@@ -144,11 +144,6 @@ const Blog = () => {
 
       </div>
       
-      <style>{`
-        .font-six-caps {
-          font-family: 'Six Caps', sans-serif;
-        }
-      `}</style>
     </section>
   );
 };

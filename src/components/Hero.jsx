@@ -60,25 +60,28 @@ const Hero = () => {
         <div className="grow flex flex-col items-center lg:items-start text-center lg:text-left">
           
           {/* DYNAMIC TYPOGRAPHY */}
-          <div className="flex flex-col gap-4 mb-20">
+          <div className="flex flex-col gap-2 md:gap-4 mb-18 mt-8">
             {/* Row 1: Technical Designer & */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-8">
-              <h1 className="text-[12vw] md:text-[8vw] lg:text-[100px] xl:text-[130px] font-bold tracking-tight leading-none text-white whitespace-nowrap">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-10">
+              <h1 className="text-[15vw] md:text-[8vw] lg:text-[100px] xl:text-[120px] font-bold tracking-tighter leading-none text-white">
                 Technical Designer
               </h1>
-              <div className="w-12 h-12 md:w-16 md:h-16 lg:w-24 lg:h-24 rounded-full border-2 border-white flex items-center justify-center translate-y-1 lg:translate-y-2">
-                 <span className="text-xl md:text-3xl lg:text-5xl font-light">&</span>
+              <div className="flex w-12 h-12 md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-full border-2 md:border-3 border-white items-center justify-center">
+                 <span className="text-xl md:text-4xl lg:text-6xl font-light">&</span>
               </div>
             </div>
 
-            {/* Row 2: Full-Stack Engineer */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-3 md:gap-x-6">
-              <h1 className="text-[12vw] md:text-[8vw] lg:text-[100px] xl:text-[130px] font-bold tracking-tight leading-none text-white">
-                Fu
+            {/* Row 2: Full-Stack Engineer with Pill */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 md:gap-x-3">
+              <h1 className="text-[15vw] md:text-[8vw] lg:text-[100px] xl:text-[120px] font-bold tracking-tighter leading-none text-white">
+                Full
               </h1>
-              <div className="w-[10vw] md:w-32.5 lg:w-40 h-[5vw] md:h-12.5 lg:h-18.75 rounded-full border-2 border-white translate-y-2 lg:translate-y-4 shadow-[0_0_30px_rgba(255,255,255,0.1)]"></div>
-              <h1 className="text-[12vw] md:text-[8vw] lg:text-[100px] xl:text-[130px] font-bold tracking-tight leading-none text-white">
-                ll-Stack Engineer
+              {/* Architectural Pill Element */}
+              <div className="w-[10vw] md:w-40 lg:w-18 h-[8vw] md:h-16 lg:h-6 rounded-full border-2 md:border-3 border-white shadow-[0_0_50px_rgba(255,255,255,0.1)] flex items-center justify-center">
+                 {/* <div className="w-[80%] h-1 bg-white/20 rounded-full"></div> */}
+              </div>
+              <h1 className="text-[15vw] md:text-[8vw] lg:text-[100px] xl:text-[120px] font-bold tracking-tighter leading-none text-white">
+                Stack Engineer
               </h1>
             </div>
           </div>
@@ -118,7 +121,7 @@ const Hero = () => {
             </div>
          </div>
          
-         <div className="pointer-events-auto">
+         {/* <div className="pointer-events-auto">
             <button onClick={scrollDown} className="group flex flex-col items-center gap-4 cursor-pointer">
                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center bg-white/5 backdrop-blur-md hover:bg-white hover:text-black transition-all">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -126,7 +129,7 @@ const Hero = () => {
                   </svg>
                </div>
             </button>
-         </div>
+         </div> */}
       </div>
 
     </section>

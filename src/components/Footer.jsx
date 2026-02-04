@@ -45,11 +45,6 @@ const Footer = () => {
 
       </div>
 
-      <style>{`
-        .font-six-caps {
-          font-family: 'Six Caps', sans-serif;
-        }
-      `}</style>
     </footer>
   );
 };

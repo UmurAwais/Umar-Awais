@@ -33,7 +33,7 @@ const About = () => {
         
         {/* --- LEFT ASSET COLUMN --- */}
         <div className="lg:col-span-3 border-r border-white/5 pr-10 flex flex-col justify-between reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out">
-          <div className="relative w-full aspect-4/5 overflow-hidden rounded-4xl bg-neutral-900 group shadow-2xl">
+          <div className="relative w-full aspect-square md:aspect-4/5 overflow-hidden rounded-3xl md:rounded-4xl bg-neutral-900 group shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" 
               alt="Workspace" 
@@ -41,16 +41,16 @@ const About = () => {
             />
           </div>
           
-          <div className="mt-12 pt-10 border-t border-white/10">
-            <div className="flex flex-row items-center gap-12 lg:gap-16">
+          <div className="mt-8 md:mt-12 pt-8 md:pt-10 border-t border-white/10">
+            <div className="flex flex-row flex-wrap items-center gap-8 md:gap-12 lg:gap-16">
               
               {/* Stat 01: Mastery */}
               <div className="group/stat">
-                <div className="flex flex-col gap-0 border-r border-white/5 pr-12 lg:pr-16">
+                <div className="flex flex-col gap-0 border-r border-white/5 pr-8 md:pr-12 lg:pr-16">
                   <span className="text-6xl md:text-8xl font-normal leading-none text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-700">
-                    02<span className="text-2xl text-white/30 ml-1 font-serif italic">+</span>
+                    02<span className="text-xl md:text-2xl text-white/30 ml-1 font-serif italic">+</span>
                   </span>
-                  <p className="text-[9px] font-black tracking-[0.4em] text-white/20 uppercase mt-2">
+                  <p className="text-[8px] md:text-[9px] font-black tracking-[0.4em] text-white/20 uppercase mt-2">
                     Years Exp
                   </p>
                 </div>
@@ -60,9 +60,9 @@ const About = () => {
               <div className="group/stat">
                 <div className="flex flex-col gap-0">
                   <span className="text-6xl md:text-8xl font-normal leading-none text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-700">
-                    20<span className="text-2xl text-white/30 ml-1 font-serif italic">+</span>
+                    20<span className="text-xl md:text-2xl text-white/30 ml-1 font-serif italic">+</span>
                   </span>
-                  <p className="text-[9px] font-black tracking-[0.4em] text-white/20 uppercase mt-2">
+                  <p className="text-[8px] md:text-[9px] font-black tracking-[0.4em] text-white/20 uppercase mt-2">
                     Projects Done
                   </p>
                 </div>
@@ -82,20 +82,19 @@ const About = () => {
         <div className="lg:col-span-6 px-10 md:px-16 lg:px-24 py-10">
           
           {/* Header & Main Title Alignment */}
-          <div className="mb-16 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out">
-            <span className="text-[10px] font-black tracking-[0.5em] text-white/40 uppercase block mb-10">
+          <div className="mb-12 md:mb-16 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out">
+            <span className="text-[9px] md:text-[10px] font-black tracking-[0.5em] text-white/40 uppercase block mb-6 md:mb-10">
               ABOUT IDENTITY
             </span>
             <div className="relative">
               <h2 
-                className="text-4xl md:text-5xl lg:text-[75px] xl:text-[90px] leading-none font-bold tracking-tighter uppercase z-10 relative"
+                className="text-3xl md:text-5xl lg:text-[65px] xl:text-[75px] leading-[1.1] md:leading-none font-bold tracking-tighter uppercase z-10 relative"
               >
-                ENGINEERING HIGH-END <br /> 
-                DIGITAL SOLUTIONS 
-                WITH
+                ENGINEERING HIGH-END <br className="hidden md:block" /> 
+                DIGITAL SOLUTIONS WITH
               </h2>
               {/* Ghost Text exactly aligned behind heading */}
-              <span className="absolute -bottom-10 left-0 text-[12vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 font-serif italic whitespace-nowrap">
+              <span className="absolute -bottom-6 md:-bottom-10 left-0 text-[18vw] md:text-[12vw] font-black text-white/2 tracking-tighter leading-none select-none uppercase z-0 font-serif italic whitespace-nowrap">
                 02 YEARS EXP
               </span>
             </div>
@@ -108,11 +107,14 @@ const About = () => {
              </p>
              
              {/* Action Button Pattern Match */}
-             <div className="flex items-center gap-6">
-                <button className="px-12 py-5 rounded-full bg-white text-black text-[11px] font-black tracking-[0.5em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_50px_rgba(255,255,255,0.1)]">
+             <div 
+                className="flex items-center gap-6 group/cta cursor-pointer"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+             >
+                <button className="px-12 py-5 rounded-full bg-white text-black text-[11px] font-black tracking-[0.5em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_50px_rgba(255,255,255,0.1)] cursor-pointer">
                    Let's Collaborate
                 </button>
-                <div className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform cursor-pointer">
+                <div className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center group-hover/cta:scale-110 transition-transform cursor-pointer">
                    <svg className="w-6 h-6 -rotate-45" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
                    </svg>
@@ -132,7 +134,7 @@ const About = () => {
 
           <div className="relative w-full max-w-[320px] lg:max-w-100">
              {/* Secondary Rounded Image Bottom-Right */}
-             <div className="aspect-4/5 overflow-hidden rounded-[3rem] border border-white/5 bg-neutral-900 shadow-2xl relative group">
+             <div className="aspect-square md:aspect-4/5 overflow-hidden rounded-4xl border border-white/5 bg-neutral-900 shadow-2xl relative group">
                 <img 
                   src="https://images.unsplash.com/photo-1497215122164-9d9fc81f1d11?auto=format&fit=crop&q=80" 
                   alt="Detail" 
@@ -141,7 +143,7 @@ const About = () => {
              </div>
 
              {/* Spinning White Stamp Seal Overlap */}
-             <div className="absolute top-0 -left-16 md:-left-24 w-40 h-40 md:w-52 md:h-52 z-20 translate-y-[-20%]">
+             <div className="absolute top-0 -left-12 md:-left-24 w-32 h-32 md:w-52 md:h-52 z-20 translate-y-[-20%]">
                 <div className="relative w-full h-full flex items-center justify-center">
                    {/* Background Disk */}
                    <div className="absolute inset-0 bg-white rounded-full shadow-2xl"></div>
@@ -152,14 +154,14 @@ const About = () => {
                          <defs>
                             <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"/>
                          </defs>
-                         <text className="text-[7px] font-black uppercase tracking-widest fill-black">
+                         <text className="text-[6px] md:text-[7px] font-black uppercase tracking-widest fill-black">
                             <textPath xlinkHref="#circlePath">Umar Awais Personal — Technical Identity — Portfolio Archive — </textPath>
                          </text>
                       </svg>
                    </div>
                    
                    {/* STATIC CENTER LOGO ASSET */}
-                   <div className="relative z-10 w-16 h-16 md:w-24 md:h-24 overflow-hidden rounded-full">
+                   <div className="relative z-10 w-12 h-12 md:w-24 md:h-24 overflow-hidden rounded-full">
                       <img 
                         src={logo} 
                         alt="Logo" 
@@ -172,7 +174,6 @@ const About = () => {
         </div>
 
       </div>
-
     </section>
   );
 };
