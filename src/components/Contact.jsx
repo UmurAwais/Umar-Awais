@@ -3,6 +3,11 @@ import React, { useEffect, useRef } from 'react';
 const Contact = () => {
   const sectionRef = useRef(null);
   const [selectedServices, setSelectedServices] = React.useState([]);
+  const [status, setStatus] = React.useState({
+    submitting: false,
+    success: false,
+    error: null
+  });
 
   const toggleService = (service) => {
     setSelectedServices(prev => 
@@ -10,6 +15,35 @@ const Contact = () => {
         ? prev.filter(s => s !== service) 
         : [...prev, service]
     );
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus({ submitting: true, success: false, error: null });
+
+    const formData = new FormData(e.target);
+    formData.append('services', selectedServices.join(', '));
+
+    try {
+      const response = await fetch('https://formspree.io/f/mqaebrda', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setStatus({ submitting: false, success: true, error: null });
+        setSelectedServices([]);
+        e.target.reset();
+      } else {
+        const data = await response.json();
+        throw new Error(data.error || 'Submission failed');
+      }
+    } catch (err) {
+      setStatus({ submitting: false, success: false, error: err.message });
+    }
   };
 
   useEffect(() => {
@@ -109,14 +143,16 @@ const Contact = () => {
                 {/* Decorative Background Element */}
                 <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/5 rounded-full blur-[100px] pointer-events-none group-hover/form:bg-white/10 transition-colors duration-1000"></div>
                 
-                <form className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12 relative z-10">
+                <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12 relative z-10">
                    
                    {/* Name Input */}
                    <div className="flex flex-col gap-4 group/field">
                       <label className="text-[10px] font-black tracking-[0.3em] text-white/30 uppercase group-focus-within/field:text-white transition-colors duration-500">Your Identity</label>
                       <div className="relative">
                         <input 
+                           name="name"
                            type="text" 
+                           required
                            placeholder="Umar Awais"
                            className="w-full bg-transparent border-b border-white/10 pt-2 pb-4 outline-none focus:border-white transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/5"
                         />
@@ -129,7 +165,9 @@ const Contact = () => {
                       <label className="text-[10px] font-black tracking-[0.3em] text-white/30 uppercase group-focus-within/field:text-white transition-colors duration-500">Electronic Mail</label>
                       <div className="relative">
                         <input 
+                           name="email"
                            type="email" 
+                           required
                            placeholder="hello@studio.com"
                            className="w-full bg-transparent border-b border-white/10 pt-2 pb-4 outline-none focus:border-white transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/5"
                         />
@@ -163,7 +201,9 @@ const Contact = () => {
                       <label className="text-[10px] font-black tracking-[0.3em] text-white/30 uppercase group-focus-within/field:text-white transition-colors duration-500">Project Narrative</label>
                       <div className="relative">
                         <textarea 
+                           name="message"
                            rows="4"
+                           required
                            placeholder="Tell us about the digital world you want to create..."
                            className="w-full bg-transparent border-b border-white/10 pt-2 pb-4 outline-none focus:border-white transition-all duration-700 text-lg font-medium text-white placeholder:text-white/5 resize-none leading-relaxed"
                         ></textarea>
@@ -174,8 +214,12 @@ const Contact = () => {
                    {/* Submit Button */}
                    <div className="md:col-span-2 mt-4 flex justify-start">
                       <div className="flex items-center gap-8 group/btn">
-                         <button className="px-16 py-6 rounded-full bg-white text-black text-[11px] font-black tracking-[0.6em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_80px_rgba(255,255,255,0.05)] cursor-pointer translate-y-0 active:scale-95">
-                            Initiate Inquiry
+                         <button 
+                            disabled={status.submitting}
+                            type="submit"
+                            className="px-16 py-6 rounded-full bg-white text-black text-[11px] font-black tracking-[0.6em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_80px_rgba(255,255,255,0.05)] cursor-pointer translate-y-0 active:scale-95 disabled:opacity-50 disabled:cursor-wait"
+                         >
+                            {status.submitting ? 'Transmitting...' : 'Initiate Inquiry'}
                          </button>
                          <div className="w-16 h-16 rounded-full border border-white/20 bg-white/5 flex items-center justify-center hover:bg-white hover:text-black transition-all group-hover/btn:scale-110 cursor-pointer">
                             <svg className="w-7 h-7 -rotate-45 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20">
@@ -184,6 +228,18 @@ const Contact = () => {
                          </div>
                       </div>
                    </div>
+
+                   {/* Status Messages */}
+                   {status.success && (
+                     <div className="md:col-span-2 mt-4 p-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 text-white text-[10px] font-black tracking-widest uppercase text-center animate-pulse">
+                        Message Transmitted Successfully. We will reach out shortly.
+                     </div>
+                   )}
+                   {status.error && (
+                     <div className="md:col-span-2 mt-4 p-4 bg-red-500/10 backdrop-blur-md rounded-2xl border border-red-500/20 text-red-500 text-[10px] font-black tracking-widest uppercase text-center">
+                        Error: {status.error}. Please try again.
+                     </div>
+                   )}
 
                 </form>
               </div>
