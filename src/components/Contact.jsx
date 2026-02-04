@@ -25,7 +25,7 @@ const Contact = () => {
     formData.append('services', selectedServices.join(', '));
 
     try {
-      const response = await fetch('https://formspree.io/f/mqaebrda', {
+      const response = await fetch('https://formspree.io/f/mlglqppk', {
         method: 'POST',
         body: formData,
         headers: {
