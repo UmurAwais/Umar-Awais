@@ -32,7 +32,7 @@ const About = () => {
       <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-0">
         
         {/* --- LEFT ASSET COLUMN --- */}
-        <div className="lg:col-span-3 border-r border-white/5 pr-10 flex flex-col justify-between reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+        <div className="lg:col-span-3 border-b lg:border-r lg:border-b-0 border-white/5 pb-10 lg:pb-0 lg:pr-10 flex flex-col justify-between reveal opacity-0 translate-y-10 transition-all duration-1000 ease-out">
           <div className="relative w-full aspect-square md:aspect-4/5 overflow-hidden rounded-3xl md:rounded-4xl bg-neutral-900 group shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" 
@@ -42,11 +42,11 @@ const About = () => {
           </div>
           
           <div className="mt-8 md:mt-12 pt-8 md:pt-10 border-t border-white/10">
-            <div className="flex flex-row flex-wrap items-center gap-8 md:gap-12 lg:gap-16">
+            <div className="flex flex-row flex-wrap items-center gap-8 md:gap-12 lg:gap-16 text-center justify-center">
               
               {/* Stat 01: Mastery */}
               <div className="group/stat">
-                <div className="flex flex-col gap-0 border-r border-white/5 pr-8 md:pr-12 lg:pr-16">
+                <div className="flex flex-col gap-0 border-r border-white/5 pr-8 lg:pr-16">
                   <span className="text-6xl md:text-8xl font-normal leading-none text-white tracking-tighter group-hover:translate-x-2 transition-transform duration-700">
                     02<span className="text-xl md:text-2xl text-white/30 ml-1 font-serif italic">+</span>
                   </span>
@@ -71,24 +71,24 @@ const About = () => {
             </div>
 
             {/* Portfolio Brand Tag */}
-            <div className="mt-12 pt-8 border-t border-white/5 flex items-center gap-3 opacity-20">
+            {/* <div className="mt-12 pt-8 border-t border-white/5 flex items-center gap-3 opacity-20">
                <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></div>
-               <span className="text-[10px] font-bold tracking-widest uppercase">UA // IDENTITY</span>
-            </div>
+               <span className="text-[10px] font-bold tracking-widest uppercase">Umar Awais</span>
+            </div> */}
           </div>
         </div>
 
         {/* --- CENTER CONTENT FIELD --- */}
-        <div className="lg:col-span-6 px-10 md:px-16 lg:px-24 py-10">
+        <div className="lg:col-span-6 px-0 md:px-16 lg:px-24 py-10 lg:py-0">
           
           {/* Header & Main Title Alignment */}
-          <div className="mb-12 md:mb-16 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out">
+          <div className="mb-12 md:mb-16 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-300 ease-out text-center">
             <span className="text-[9px] md:text-[10px] font-black tracking-[0.5em] text-white/40 uppercase block mb-6 md:mb-10">
               ABOUT IDENTITY
             </span>
             <div className="relative">
               <h2 
-                className="text-3xl md:text-5xl lg:text-[65px] xl:text-[75px] leading-[1.1] md:leading-none font-bold tracking-tighter uppercase z-10 relative"
+                className="text-3xl md:text-5xl lg:text-[65px] xl:text-[75px] leading-[1.1] md:leading-none font-bold tracking-tighter uppercase z-10 relative text-center md:text-left"
               >
                 ENGINEERING HIGH-END <br className="hidden md:block" /> 
                 DIGITAL SOLUTIONS WITH
@@ -102,19 +102,19 @@ const About = () => {
 
           {/* Indented Description Alignment */}
           <div className="ml-0 lg:ml-20 max-w-137.5 reveal opacity-0 translate-y-10 transition-all duration-1000 delay-500 ease-out">
-             <p className="text-sm md:text-lg font-medium leading-[2.4] text-white/50 mb-10 text-left">
+             <p className="text-sm md:text-lg font-medium leading-[2.0] md:leading-[2.4] text-white/50 mb-10 text-center md:text-left">
                 As a technical web designer with over 2 years of professional experience, I specialize in transforming complex business requirements into pixel-perfect digital ecosystems. Having successfully delivered 20+ international projects, I combine architectural precision with modern MERN stack engineering to create scalable, high-performance platforms that define market leadership.
              </p>
              
              {/* Action Button Pattern Match */}
              <div 
-                className="flex items-center gap-6 group/cta cursor-pointer"
+                className="flex flex-col sm:flex-row items-center sm:items-center justify-center md:justify-start gap-6 group/cta cursor-pointer"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
              >
-                <button className="px-12 py-5 rounded-full bg-white text-black text-[11px] font-black tracking-[0.5em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_50px_rgba(255,255,255,0.1)] cursor-pointer">
+                <button className="w-full sm:w-auto px-10 md:px-12 py-5 rounded-full bg-white text-black text-[11px] font-black tracking-[0.5em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_50px_rgba(255,255,255,0.1)] cursor-pointer">
                    Let's Collaborate
                 </button>
-                <div className="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center group-hover/cta:scale-110 transition-transform cursor-pointer">
+                <div className="hidden sm:flex w-14 h-14 rounded-full bg-white text-black items-center justify-center group-hover/cta:scale-110 transition-transform cursor-pointer">
                    <svg className="w-6 h-6 -rotate-45" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
                    </svg>
@@ -143,7 +143,7 @@ const About = () => {
              </div>
 
              {/* Spinning White Stamp Seal Overlap */}
-             <div className="absolute top-0 -left-12 md:-left-24 w-32 h-32 md:w-52 md:h-52 z-20 translate-y-[-20%]">
+             <div className="absolute top-0 -left-6 md:-left-24 w-24 h-24 md:w-52 md:h-52 z-20 translate-y-[-20%] md:translate-y-[-20%]">
                 <div className="relative w-full h-full flex items-center justify-center">
                    {/* Background Disk */}
                    <div className="absolute inset-0 bg-white rounded-full shadow-2xl"></div>
