@@ -45,7 +45,7 @@ const Services = () => {
       id: '04',
       title: "SHOPIFY ENGINEERING",
       description: "Creating high-converting e-commerce narratives. From custom Liquid implementation to strategic store optimization, I build Shopify stores that don't just look good—they sell.",
-      tags: ["Liquid", "E-commerce SEO", "CRO", "Theme Studio"]
+      tags: ["Liquid", "E-commerce SEO", "CRO", "Theme Architecture"]
     },
     {
       id: '05',

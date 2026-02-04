@@ -73,7 +73,7 @@ const About = () => {
             {/* Portfolio Brand Tag */}
             <div className="mt-12 pt-8 border-t border-white/5 flex items-center gap-3 opacity-20">
                <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></div>
-               <span className="text-[10px] font-bold tracking-widest uppercase">UA // STUDIO</span>
+               <span className="text-[10px] font-bold tracking-widest uppercase">UA // IDENTITY</span>
             </div>
           </div>
         </div>
@@ -153,7 +153,7 @@ const About = () => {
                             <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"/>
                          </defs>
                          <text className="text-[7px] font-black uppercase tracking-widest fill-black">
-                            <textPath xlinkHref="#circlePath">Umar Awais Studio — Personal Identity — Portfolio Archive — </textPath>
+                            <textPath xlinkHref="#circlePath">Umar Awais Personal — Technical Identity — Portfolio Archive — </textPath>
                          </text>
                       </svg>
                    </div>

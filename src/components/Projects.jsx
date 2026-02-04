@@ -54,7 +54,7 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: "LUMINA STUDIO",
+      title: "LUMINA INTERFACE",
       category: "Brand Site",
       year: "2022",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80"

@@ -128,7 +128,7 @@ const Contact = () => {
 
                  {/* Location Slot */}
                  <div>
-                    <span className="text-[10px] font-black tracking-widest text-white/20 uppercase block mb-4">Studio Location</span>
+                    <span className="text-[10px] font-black tracking-widest text-white/20 uppercase block mb-4">Base Location</span>
                     <p className="text-xl md:text-2xl font-medium text-white/60">
                        Based in Pakistan — Available for global collaborations.
                     </p>
@@ -168,7 +168,7 @@ const Contact = () => {
                            name="email"
                            type="email" 
                            required
-                           placeholder="hello@studio.com"
+                           placeholder="hello@umarawais.com"
                            className="w-full bg-white/2 border-b border-white/10 pt-4 pb-4 px-4 outline-none focus:border-white focus:bg-white/5 transition-all duration-700 text-lg md:text-xl font-medium text-white placeholder:text-white/10 rounded-t-xl"
                         />
                         <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)] transition-all duration-700 group-focus-within/field:w-full"></div>
