@@ -81,7 +81,7 @@ const Contact = () => {
                    CONTACT INTERFACE
                 </span>
                 <div className="relative">
-                   <h2 className="text-6xl md:text-[70px] lg:text-[80px] font-normal uppercase tracking-tighter leading-[0.85] z-10 relative">
+                   <h2 className="text-6xl md:text-[70px] lg:text-[80px] font-bold uppercase tracking-tighter leading-[0.85] z-10 relative">
                       GET IN <br className="md:hidden" /> TOUCH
                    </h2>
                    {/* Ghost Text Layer */}

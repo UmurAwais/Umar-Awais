@@ -71,7 +71,7 @@ const Services = () => {
                    SERVICE ARCHITECTURE
                 </span>
                 <div className="relative">
-                   <h2 className="text-6xl md:text-[70px] lg:text-[80px] font-normal uppercase tracking-tighter leading-[0.85] z-10 relative">
+                   <h2 className="text-6xl md:text-[70px] lg:text-[80px] font-bold uppercase tracking-tighter leading-[0.85] z-10 relative">
                       CRAFTING DIGITAL <br className="md:hidden" /> CAPABILITIES
                    </h2>
                    {/* Ghost Text Layer */}
@@ -108,7 +108,7 @@ const Services = () => {
 
                 {/* Title */}
                 <div className="lg:col-span-5">
-                   <h3 className="text-4xl md:text-[70px] lg:text-[70px] font-normal uppercase tracking-tighter leading-none group-hover:translate-x-4 transition-transform duration-700">
+                   <h3 className="text-4xl md:text-[30px] lg:text-[40px] font-bold uppercase tracking-tighter leading-none group-hover:translate-x-4 transition-transform duration-700">
                      {service.title}
                    </h3>
                 </div>

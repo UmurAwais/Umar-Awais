@@ -65,7 +65,7 @@ const Blog = () => {
                    THOUGHT LEADERSHIP
                 </span>
                 <div className="relative">
-                   <h2 className="text-6xl md:text-[70px] lg:text-[80px] font-normal uppercase tracking-tighter leading-[0.85] z-10 relative">
+                   <h2 className="text-6xl md:text-[70px] lg:text-[80px] font-bold uppercase tracking-tighter leading-[0.85] z-10 relative">
                       LATEST <br className="md:hidden" /> PERSPECTIVES
                    </h2>
                    {/* Ghost Text Layer */}

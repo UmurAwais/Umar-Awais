@@ -129,7 +129,7 @@ const Projects = () => {
                    CREATIVE ARCHIVE
                 </span>
                 <div className="relative">
-                   <h2 className="text-6xl md:text-9xl lg:text-[80px] font-normal uppercase tracking-tighter leading-[0.85] z-10 relative">
+                   <h2 className="text-6xl md:text-9xl lg:text-[80px] font-bold uppercase tracking-tighter leading-[0.85] z-10 relative">
                       SELECTED PROJECTS
                    </h2>
                    {/* Ghost Text Layer */}
@@ -179,7 +179,7 @@ const Projects = () => {
                       <span className="text-black text-[9px] font-black tracking-widest uppercase">// Photo</span>
                    </div>
                    
-                   <h3 className="text-4xl md:text-[60px] lg:text-[70px] font-normal text-white uppercase tracking-tighter leading-none drop-shadow-2xl translate-y-2 group-hover:translate-y-0 transition-transform duration-700">
+                   <h3 className="text-4xl md:text-[30px] lg:text-[40px] font-bold text-white uppercase tracking-tighter leading-none drop-shadow-2xl translate-y-2 group-hover:translate-y-0 transition-transform duration-700">
                      {project.title}
                    </h3>
 
