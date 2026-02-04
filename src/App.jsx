@@ -5,6 +5,7 @@ import About from './components/About'
 import TextMarquee from './components/TextMarquee'
 import ScrollToTop from './components/ScrollToTop'
 import Projects from './components/Projects'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <TextMarquee text="TRANSFORMING AGENCY" speed={40} />
       <About />
       <Projects />
+      <Footer />
       <ScrollToTop />
       {/* Future sections will go here */}
     </div>
