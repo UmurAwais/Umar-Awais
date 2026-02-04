@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
 import Services from './components/Services'
+import Blog from './components/Blog'
 import TextMarquee from './components/TextMarquee'
 import ScrollToTop from './components/ScrollToTop'
 import Projects from './components/Projects'
@@ -20,6 +21,7 @@ const App = () => {
       <About />
       <Projects />
       <Services />
+      <Blog />
       <Footer />
       <ScrollToTop />
       {/* Future sections will go here */}
