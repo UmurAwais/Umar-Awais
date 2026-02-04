@@ -113,9 +113,9 @@ const Blog = () => {
                   <span>{post.readTime}</span>
                 </div>
                 
-                <h3 className="text-5xl md:text-6xl font-normal uppercase tracking-tighter leading-[0.9] font-six-caps group-hover:text-white transition-colors duration-500">
+                <p className="text-xl md:text-2xl font-bold uppercase tracking-tight leading-tight group-hover:text-white transition-colors duration-500">
                   {post.title}
-                </h3>
+                </p>
                 
                 <div className="inline-flex items-center gap-2 mt-2 group-hover:translate-x-2 transition-transform duration-500 cursor-pointer">
                   <span className="text-[10px] font-black tracking-[0.2em] text-white/50 group-hover:text-white uppercase">Read Full Article</span>
