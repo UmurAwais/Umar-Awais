@@ -65,7 +65,7 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen flex items-end md:items-center justify-center overflow-hidden bg-black text-white selection:bg-white selection:text-black pt-24 lg:pt-32 pb-16 md:py-10">
       {/* BACKGROUND GRAPHIC */}
       <div className="absolute right-0 top-0 w-full lg:w-1/2 h-full z-0 pointer-events-none transition-transform duration-700 ease-out" style={{ transform: `translateX(${mousePos.x * 0.5}px) translateY(${mousePos.y * 0.5}px)` }}>
-        <div className="relative w-full h-full opacity-40 lg:opacity-60 grayscale contrast-[1.1] brightness-[0.8]">
+        <div className="relative w-full h-full opacity-40 lg:opacity-60">
           <img src="/umar-portrait.png" alt="Umar Awais Landscape" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 opacity-[0.2] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
           <div className="absolute inset-0 bg-linear-to-r from-black via-black/40 to-transparent"></div>

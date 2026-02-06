@@ -18,7 +18,7 @@ const About = () => {
             <img 
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" 
               alt="Workspace" 
-              className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:scale-105"
+              className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
             />
           </div>
           
@@ -119,7 +119,7 @@ const About = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1497215122164-9d9fc81f1d11?auto=format&fit=crop&q=80" 
                   alt="Detail" 
-                  className="w-full h-full object-cover grayscale opacity-40 transition-all duration-[2s] group-hover:scale-110 group-hover:opacity-100"
+                  className="w-full h-full object-cover opacity-40 transition-all duration-[2s] group-hover:scale-110 group-hover:opacity-100"
                 />
              </div>
 

@@ -11,84 +11,96 @@ const Projects = () => {
       title: "KBCREATIVES.PK",
       category: "ReactJS / Tailwind",
       year: "2024",
-      image: kbcreatives
+      image: kbcreatives,
+      description: "A modern creative agency platform built with React and Tailwind CSS, featuring dynamic animations and responsive design."
     },
     {
       id: 2,
       title: "AXON TECHNICAL",
       category: "Development",
       year: "2024",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80",
+      description: "Enterprise-grade technical solutions platform with advanced architecture and scalable infrastructure."
     },
     {
       id: 3,
       title: "MAISON LUXURY",
       category: "E-Commerce",
       year: "2023",
-      image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80",
+      description: "Premium e-commerce experience for luxury brands with seamless checkout and elegant product showcases."
     },
     {
       id: 4,
       title: "VORTEX PROTOCOL",
       category: "MERN Stack",
       year: "2023",
-      image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=80",
+      description: "Full-stack MERN application with real-time data synchronization and advanced state management."
     },
     {
       id: 5,
       title: "LUMINA INTERFACE",
       category: "Brand Site",
       year: "2022",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
+      description: "Minimalist brand identity website with immersive storytelling and micro-interactions."
     },
     {
       id: 6,
       title: "GHOST INTERFACE",
       category: "UI Engineering",
       year: "2021",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80",
+      description: "Cutting-edge UI engineering project featuring glassmorphism and advanced CSS animations."
     },
     {
       id: 7,
       title: "CORE ARCHIVE",
       category: "System Design",
       year: "2024",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
+      description: "Comprehensive system design solution with modular architecture and scalable components."
     },
     {
       id: 8,
       title: "NOVA ECOMMERCE",
       category: "Shopify Plus",
       year: "2024",
-      image: "https://images.unsplash.com/photo-1518005020470-588a440f9812?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1518005020470-588a440f9812?auto=format&fit=crop&q=80",
+      description: "High-performance Shopify Plus store with custom theme development and conversion optimization."
     },
     {
       id: 9,
       title: "KINETIC WEB",
       category: "Front-end",
       year: "2023",
-      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80",
+      description: "Dynamic front-end experience with scroll-triggered animations and parallax effects."
     },
     {
       id: 10,
       title: "PRISM IDENTITY",
       category: "Branding",
       year: "2023",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
+      description: "Complete brand identity system with digital guidelines and interactive brand book."
     },
     {
       id: 11,
       title: "SILICON FLOW",
       category: "Web App",
       year: "2022",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80",
+      description: "Progressive web application with offline capabilities and native-like performance."
     },
     {
       id: 12,
       title: "ONYX DASHBOARD",
       category: "Dashboard",
       year: "2021",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80",
+      description: "Analytics dashboard with real-time data visualization and customizable widgets."
     }
   ];
 
@@ -141,7 +153,7 @@ const Projects = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-105 group-hover:brightness-100 transition-all duration-1000 ease-out"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-out"
                 />
                 
                 {/* Top Glass Tag */}
@@ -151,8 +163,17 @@ const Projects = () => {
                    </div>
                 </div>
 
+                {/* Hover Description Overlay */}
+                <div className="absolute inset-0 bg-black/90 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center p-8">
+                   <div className="text-center max-w-md">
+                      <p className="text-sm md:text-base font-medium leading-relaxed text-white/90">
+                         {project.description}
+                      </p>
+                   </div>
+                </div>
+
                 {/* Hover Interaction Arrow */}
-                <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500">
+                <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500 z-10">
                    <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center shadow-2xl">
                       <svg className="w-5 h-5 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
