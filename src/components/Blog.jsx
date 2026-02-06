@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
   const sectionRef = useRef(null);
@@ -67,9 +68,10 @@ const Blog = () => {
         {/* --- BLOG GRID --- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {blogPosts.map((post, index) => (
-            <div 
+            <Link 
               key={post.id} 
-              className="group cursor-pointer"
+              to={`/blog/${post.id}`}
+              className="group cursor-pointer block"
             >
               {/* Image Container */}
               <div className="relative aspect-16/10 overflow-hidden rounded-2xl md:rounded-3xl bg-neutral-900 mb-8 border border-white/5 group-hover:border-white/20 transition-all duration-700">
@@ -97,14 +99,14 @@ const Blog = () => {
                   {post.title}
                 </p>
                 
-                <div className="inline-flex items-center justify-center md:justify-start gap-2 mt-2 group-hover:translate-x-2 transition-transform duration-500 cursor-pointer">
+                <div className="inline-flex items-center justify-center md:justify-start gap-2 mt-2 group-hover:translate-x-2 transition-transform duration-500">
                   <span className="text-[10px] font-black tracking-[0.2em] text-white/50 group-hover:text-white uppercase">Read Full Article</span>
                   <svg className="w-3 h-3 text-white/50 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

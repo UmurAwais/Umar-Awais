@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/web development.png';
 
 const Header = () => {
@@ -6,8 +7,18 @@ const Header = () => {
   const [activeTab, setActiveTab] = useState('home');
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+  const navigate = useNavigate();
 
   useEffect(() => {
+    if (!isHomePage) {
+      if (location.pathname.startsWith('/blog')) {
+        setActiveTab('blog');
+      }
+      return;
+    }
+
     const handleScroll = () => {
       const position = window.scrollY;
       setIsScrolled(position > 50);
@@ -32,8 +43,9 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call once on mount
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location, isHomePage]);
 
   const navItems = [
     { label: 'Home', id: 'home' },
@@ -45,9 +57,19 @@ const Header = () => {
   ];
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (!isHomePage) {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -64,9 +86,9 @@ const Header = () => {
         
         {/* LOGO - Refined with Asset Image */}
         <div className="flex-none pointer-events-auto">
-          <a 
-            href="#home" 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          <Link 
+            to="/" 
+            onClick={() => isHomePage ? window.scrollTo({ top: 0, behavior: 'smooth' }) : null}
             className="group flex items-center gap-4 cursor-pointer"
           >
             <div className="w-10 h-10 md:w-12 md:h-12 glass-premium rounded-full flex items-center justify-center transition-all duration-500 overflow-hidden group-hover:bg-white border border-white/10 group-hover:border-transparent">
@@ -80,7 +102,7 @@ const Header = () => {
                 Full-Stack Engineer
               </span>
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* FLOATING NAV - Premium Geometry */}

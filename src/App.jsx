@@ -1,33 +1,23 @@
 import React from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Services from './components/Services'
-import Blog from './components/Blog'
-import Contact from './components/Contact'
-import TextMarquee from './components/TextMarquee'
-import ScrollToTop from './components/ScrollToTop'
-import Projects from './components/Projects'
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import BlogDetails from './pages/BlogDetails'
+import ScrollToTopReset from './components/ScrollToTopReset'
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-black w-full relative">
-      {/* Premium Grain Texture Overlay */}
-      <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-9999 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
-      
-      <Header />
-      <Hero />
-      <TextMarquee text="ENGINEERING DIGITAL ECOSYSTEMS" speed={40} />
-      <About />
-      <Projects />
-      <Services />
-      <Blog />
-      <Contact />
-      <Footer />
-      <ScrollToTop />
-      {/* Future sections will go here */}
-    </div>
+    <Router>
+      <ScrollToTopReset />
+      <div className="min-h-screen bg-black w-full relative">
+        {/* Premium Grain Texture Overlay */}
+        <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-9999 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
