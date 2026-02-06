@@ -7,7 +7,7 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   
   const roles = [
-    "FULL STACK ENGINEER",
+    "CMS EXPERT",
     "MERN STACK EXPERT",
     "UI/UX INNOVATOR",
     "DIGITAL ARCHITECT"
