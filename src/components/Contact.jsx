@@ -50,7 +50,7 @@ const Contact = () => {
     <section 
       id="contact" 
       ref={sectionRef}
-      className="bg-black text-white py-20 md:py-28 px-6 md:px-12 lg:px-20 overflow-hidden border-t border-white/5"
+      className="bg-black text-white pb-20 md:pb-24 px-6 md:px-12 lg:px-20 overflow-hidden border-t border-white/5"
     >
       <div className="w-full">
         

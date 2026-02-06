@@ -8,6 +8,8 @@ import harvest from '../assets/harvest.png';
 import countyroofingandbuilding from '../assets/countyroofingandbuilding.png'
 import atouchofyellow from '../assets/atouchofyellow.png'
 import dairyland from '../assets/dairyland.png'
+import framefusion from '../assets/framefusion.png'
+import adesolaseries from '../assets/adesolaseries.png'
 
 const Projects = () => {
   const sectionRef = useRef(null);
@@ -97,30 +99,21 @@ const Projects = () => {
     },
     {
       id: 10,
-      title: "PRISM IDENTITY",
-      category: "Branding",
-      year: "2023",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
-      description: "Complete brand identity system with digital guidelines and interactive brand book.",
-      link: "https://prismidentity.agency"
+      title: "FrameFusion",
+      category: "Shopify Plus / Kalles Theme / Judge.me",
+      year: "2026",
+      image: framefusion,
+      description: "A premium e-commerce platform specializing in high-quality wall decor, Islamic calligraphy, and motivational art sets with seamless nationwide delivery.",
+      link: "https://framefusion.pk"
     },
     {
       id: 11,
-      title: "SILICON FLOW",
-      category: "Web App",
-      year: "2022",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80",
-      description: "Progressive web application with offline capabilities and native-like performance.",
-      link: "https://siliconflow.app"
-    },
-    {
-      id: 12,
-      title: "ONYX DASHBOARD",
-      category: "Dashboard",
-      year: "2021",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80",
-      description: "Analytics dashboard with real-time data visualization and customizable widgets.",
-      link: "https://onyxdashboard.com"
+      title: "ADESOLA SERIES",
+      category: "WordPress / Elementor / WooCommerce / MailChimp / MetForms / Contact Form 7",
+      year: "2026",
+      image: adesolaseries,
+      description: "An educational e-commerce platform dedicated to introducing children to Yoruba language and culture through a joyful collection of interactive books, learning posters, and activity kits.",
+      link: "http://adesolaseries.com/"
     }
   ];
 
