@@ -16,7 +16,7 @@ const About = () => {
         <div className="lg:col-span-3 border-b lg:border-r lg:border-b-0 border-white/5 pb-10 lg:pb-0 lg:pr-10 flex flex-col justify-between">
           <div className="relative w-full aspect-square md:aspect-4/5 overflow-hidden rounded-3xl md:rounded-4xl bg-neutral-900 group shadow-2xl">
             <img 
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" 
+              src="https://images.unsplash.com/photo-1528372444006-1bfc81acab02?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
               alt="Workspace" 
               className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
             />
@@ -117,9 +117,9 @@ const About = () => {
              {/* Secondary Rounded Image Bottom-Right */}
              <div className="aspect-square md:aspect-4/5 overflow-hidden rounded-4xl border border-white/5 bg-neutral-900 shadow-2xl relative group">
                 <img 
-                  src="https://images.unsplash.com/photo-1497215122164-9d9fc81f1d11?auto=format&fit=crop&q=80" 
+                  src="https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="Detail" 
-                  className="w-full h-full object-cover opacity-40 transition-all duration-[2s] group-hover:scale-110 group-hover:opacity-100"
+                  className="w-full h-full object-cover transition-all duration-[2s] group-hover:scale-110"
                 />
              </div>
 
