@@ -1,5 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import kbcreatives from '../assets/kbcreatives.png';
+import sparktrainings from '../assets/sparktrainings.png';
+import brightproposal from '../assets/brightproposal.png';
+import ghlogistics from '../assets/ghlogistics.png';
+import a13tyres from '../assets/a13tyres.png';
+import harvest from '../assets/harvest.png';
+import countyroofingandbuilding from '../assets/countyroofingandbuilding.png'
+import atouchofyellow from '../assets/atouchofyellow.png'
+import dairyland from '../assets/dairyland.png'
 
 const Projects = () => {
   const sectionRef = useRef(null);
@@ -8,75 +16,84 @@ const Projects = () => {
   const projectList = [
     {
       id: 1,
-      title: "KBCREATIVES.PK",
+      title: "KBCREATIVES",
       category: "ReactJS / Tailwind",
-      year: "2024",
+      year: "2025",
       image: kbcreatives,
-      description: "A modern creative agency platform built with React and Tailwind CSS, featuring dynamic animations and responsive design."
+      description: "A modern creative agency platform built with React and Tailwind CSS, featuring dynamic animations and responsive design.",
+      link: "https://kbcreatives.pk/"
     },
     {
       id: 2,
-      title: "AXON TECHNICAL",
-      category: "Development",
-      year: "2024",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80",
-      description: "Enterprise-grade technical solutions platform with advanced architecture and scalable infrastructure."
+      title: "Spark Trainings",
+      category: "ReactJS / Tailwind / MongoDB / FireBase / NodeJS / ExpressJS",
+      year: "2025",
+      image: sparktrainings,
+      description: "A comprehensive training platform (LMS) for technical professionals with interactive courses and real-time feedback.",
+      link: "https://sparktrainings.com"
     },
     {
       id: 3,
-      title: "MAISON LUXURY",
-      category: "E-Commerce",
-      year: "2023",
-      image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80",
-      description: "Premium e-commerce experience for luxury brands with seamless checkout and elegant product showcases."
+      title: "THE BRIGHT PROPOSAL",
+      category: "WordPress / Elementor / Contact Form 7",
+      year: "2025",
+      image: brightproposal,
+      description: "A premium event planning and proposal platform in Singapore, featuring elegant design and seamless user interaction.",
+      link: "https://thebrightproposal.sg/"
     },
     {
       id: 4,
-      title: "VORTEX PROTOCOL",
-      category: "MERN Stack",
-      year: "2023",
-      image: "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=80",
-      description: "Full-stack MERN application with real-time data synchronization and advanced state management."
+      title: "GH LOGISTICS",
+      category: "WordPress / Elementor / Metform / Contact Form 7",
+      year: "2025",
+      image: ghlogistics,
+      description: "A logistics management platform for UK-based logistics company, featuring real-time tracking and order management.",
+      link: "https://ghlogistics.co.uk/"
     },
     {
       id: 5,
-      title: "LUMINA INTERFACE",
-      category: "Brand Site",
-      year: "2022",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80",
-      description: "Minimalist brand identity website with immersive storytelling and micro-interactions."
+      title: "A13 TYRES",
+      category: "WordPress / Elementor / WooCommerce / Contact Form 7 / Rank Math SEO",
+      year: "2025",
+      image: a13tyres,
+      description: "A high-performance e-commerce and service ecosystem for a premier UK automotive provider. Engineered with a conversion-optimized interface for 24/7 mobile tyre fitting, inventory management, and seamless appointment scheduling.",
+      link: "https://a13tyres.co.uk/"
     },
     {
       id: 6,
-      title: "GHOST INTERFACE",
-      category: "UI Engineering",
-      year: "2021",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80",
-      description: "Cutting-edge UI engineering project featuring glassmorphism and advanced CSS animations."
+      title: "HARVEST PAVING AND LANDSCAPES",
+      category: "WordPress / Elementor / Rank Math SEO",
+      year: "2025",
+      image: harvest,
+      description: "A comprehensive landscaping and paving ecosystem dedicated to transforming outdoor spaces across the UK. Specializing in high-durability driveways, luxury stone patios, and bespoke garden architecture.",
+      link: "https://harvestpavingandlandscapes.co.uk/"
     },
     {
       id: 7,
-      title: "CORE ARCHIVE",
-      category: "System Design",
-      year: "2024",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
-      description: "Comprehensive system design solution with modular architecture and scalable components."
+      title: "COUNTY ROOFING AND BUILDING",
+      category: "WordPress / Elementor / Rank Math SEO / WPForms",
+      year: "2025",
+      image: countyroofingandbuilding,
+      description: "A roofing and building company based in the UK, offering a range of services including roofing, building, and maintenance.",
+      link: "https://countyroofingandbuilding.co.uk/"
     },
     {
       id: 8,
-      title: "NOVA ECOMMERCE",
-      category: "Shopify Plus",
-      year: "2024",
-      image: "https://images.unsplash.com/photo-1518005020470-588a440f9812?auto=format&fit=crop&q=80",
-      description: "High-performance Shopify Plus store with custom theme development and conversion optimization."
+      title: "A TOUCH OF YELLOW",
+      category: "WordPress / Elementor / Rank Math SEO",
+      year: "2025",
+      image: atouchofyellow,
+      description: "A strategic marketing and analytics agency that helps purpose-led businesses grow with intention through brand strategy, storytelling, and measurable data tracking.",
+      link: "https://atouchofyelllow.com/"
     },
     {
       id: 9,
-      title: "KINETIC WEB",
-      category: "Front-end",
-      year: "2023",
-      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80",
-      description: "Dynamic front-end experience with scroll-triggered animations and parallax effects."
+      title: "DAIRYLAND",
+      category: "Shopify Plus / Ella Theme / Tiktok Feed / Judge.me",
+      year: "2025",
+      image: dairyland,
+      description: "A flagship farm-to-table e-commerce ecosystem for a premier Pakistani dairy provider, featuring fresh milk subscriptions and premium health-focused branding.",
+      link: "https://dairyland.com.pk"
     },
     {
       id: 10,
@@ -84,7 +101,8 @@ const Projects = () => {
       category: "Branding",
       year: "2023",
       image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
-      description: "Complete brand identity system with digital guidelines and interactive brand book."
+      description: "Complete brand identity system with digital guidelines and interactive brand book.",
+      link: "https://prismidentity.agency"
     },
     {
       id: 11,
@@ -92,7 +110,8 @@ const Projects = () => {
       category: "Web App",
       year: "2022",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80",
-      description: "Progressive web application with offline capabilities and native-like performance."
+      description: "Progressive web application with offline capabilities and native-like performance.",
+      link: "https://siliconflow.app"
     },
     {
       id: 12,
@@ -100,7 +119,8 @@ const Projects = () => {
       category: "Dashboard",
       year: "2021",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80",
-      description: "Analytics dashboard with real-time data visualization and customizable widgets."
+      description: "Analytics dashboard with real-time data visualization and customizable widgets.",
+      link: "https://onyxdashboard.com"
     }
   ];
 
@@ -144,8 +164,11 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           
           {visibleProjects.map((project, index) => (
-            <div 
+            <a 
               key={project.id} 
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative flex flex-col cursor-pointer"
             >
               {/* Image Canvas: High-Radius & Immersive */}
@@ -153,22 +176,25 @@ const Projects = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 ease-out"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 
-                {/* Top Glass Tag */}
-                <div className="absolute top-6 left-6 flex items-center gap-3">
-                   <div className="px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-xl border border-white/10 text-[9px] font-black tracking-[0.4em] text-white/60 uppercase">
-                      {project.category}
-                   </div>
-                </div>
-
                 {/* Hover Description Overlay */}
-                <div className="absolute inset-0 bg-black/90 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center p-8">
-                   <div className="text-center max-w-md">
-                      <p className="text-sm md:text-base font-medium leading-relaxed text-white/90">
-                         {project.description}
-                      </p>
+                <div className="absolute inset-0 bg-black/95 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center p-8 text-center">
+                   <p className="text-sm md:text-base font-medium leading-relaxed text-white/90 mb-8 max-w-sm">
+                      {project.description}
+                   </p>
+                   
+                   {/* Technical Stack Tags */}
+                   <div className="flex flex-wrap items-center justify-center gap-2">
+                      {project.category.split('/').map((tag, i) => (
+                         <span 
+                            key={i}
+                            className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[8px] font-black tracking-[0.2em] text-white/40 uppercase whitespace-nowrap"
+                         >
+                            {tag.trim()}
+                         </span>
+                      ))}
                    </div>
                 </div>
 
@@ -198,7 +224,7 @@ const Projects = () => {
                    </span>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
