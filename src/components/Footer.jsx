@@ -4,10 +4,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { label: 'Facebook', url: '#' },
-    { label: 'Linkedin', url: '#' },
-    { label: 'Instagram', url: '#' },
-    { label: 'Github', url: '#' },
+    { label: 'Facebook', url: 'https://www.facebook.com/umarawaisofficial' },
+    { label: 'Linkedin', url: 'https://www.linkedin.com/in/umurawais' },
+    { label: 'Instagram', url: 'https://www.instagram.com/umurawais' },
+    { label: 'Github', url: 'https://github.com/UmurAwais' },
   ];
 
   return (
