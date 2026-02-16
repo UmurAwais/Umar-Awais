@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import BlogDetails from './pages/BlogDetails'
+import TermsAndConditions from './pages/TermsAndConditions'
 import ScrollToTopReset from './components/ScrollToTopReset'
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog/:id" element={<BlogDetails />} />
+          <Route path="/terms" element={<TermsAndConditions />} />
         </Routes>
       </div>
     </Router>

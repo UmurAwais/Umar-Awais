@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -41,7 +42,7 @@ const Footer = () => {
 
           {/* Legal Links - Right on Tablet/Desktop, Centered on Mobile Middle */}
           <div className="flex items-center justify-center md:justify-end gap-8 order-2 md:order-2 lg:order-3">
-            <a href="#" className="hover:text-white transition-colors duration-300">Terms & Condition</a>
+            <Link to="/terms" className="hover:text-white transition-colors duration-300">Terms & Condition</Link>
             <a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
           </div>
 
