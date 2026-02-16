@@ -160,7 +160,7 @@ const Contact = () => {
                    <div className="md:col-span-2 flex flex-col gap-8 group/field mt-4">
                       <label className="text-[10px] font-black tracking-[0.4em] text-white/40 uppercase">How can we assist?</label>
                       <div className="flex flex-wrap gap-4">
-                        {['Web Design', 'Development', 'Branding', 'Consultation'].map((option) => (
+                        {['Web Design', 'MERN Stack', 'Shopify', 'WordPress', 'UI/UX Design'].map((option) => (
                           <button 
                             key={option}
                             type="button"
