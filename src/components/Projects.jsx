@@ -10,16 +10,22 @@ import atouchofyellow from '../assets/atouchofyellow.png'
 import dairyland from '../assets/dairyland.png'
 import framefusion from '../assets/framefusion.png'
 import adesolaseries from '../assets/adesolaseries.png'
+import krayz from '../assets/krayz.png'
+import bfmakeup from '../assets/bfmakeup.png'
 
 const Projects = () => {
   const sectionRef = useRef(null);
+  const [activeFilter, setActiveFilter] = useState('ALL');
   const [showAll, setShowAll] = useState(false);
+
+  const filters = ['ALL', 'REACT', 'SHOPIFY', 'WORDPRESS'];
 
   const projectList = [
     {
       id: 1,
       title: "KBCREATIVES",
       category: "ReactJS / Tailwind",
+      platform: "REACT",
       year: "2025",
       image: kbcreatives,
       description: "A modern creative agency platform built with React and Tailwind CSS, featuring dynamic animations and responsive design.",
@@ -29,6 +35,7 @@ const Projects = () => {
       id: 2,
       title: "Spark Trainings",
       category: "ReactJS / Tailwind / MongoDB / FireBase / NodeJS / ExpressJS",
+      platform: "REACT",
       year: "2025",
       image: sparktrainings,
       description: "A comprehensive training platform (LMS) for technical professionals with interactive courses and real-time feedback.",
@@ -38,6 +45,7 @@ const Projects = () => {
       id: 3,
       title: "THE BRIGHT PROPOSAL",
       category: "WordPress / Elementor / Contact Form 7",
+      platform: "WORDPRESS",
       year: "2025",
       image: brightproposal,
       description: "A premium event planning and proposal platform in Singapore, featuring elegant design and seamless user interaction.",
@@ -47,6 +55,7 @@ const Projects = () => {
       id: 4,
       title: "GH LOGISTICS",
       category: "WordPress / Elementor / Metform / Contact Form 7",
+      platform: "WORDPRESS",
       year: "2025",
       image: ghlogistics,
       description: "A logistics management platform for UK-based logistics company, featuring real-time tracking and order management.",
@@ -56,6 +65,7 @@ const Projects = () => {
       id: 5,
       title: "A13 TYRES",
       category: "WordPress / Elementor / WooCommerce / Contact Form 7 / Rank Math SEO",
+      platform: "WORDPRESS",
       year: "2025",
       image: a13tyres,
       description: "A high-performance e-commerce and service ecosystem for a premier UK automotive provider. Engineered with a conversion-optimized interface for 24/7 mobile tyre fitting, inventory management, and seamless appointment scheduling.",
@@ -65,6 +75,7 @@ const Projects = () => {
       id: 6,
       title: "HARVEST PAVING AND LANDSCAPES",
       category: "WordPress / Elementor / Rank Math SEO",
+      platform: "WORDPRESS",
       year: "2025",
       image: harvest,
       description: "A comprehensive landscaping and paving ecosystem dedicated to transforming outdoor spaces across the UK. Specializing in high-durability driveways, luxury stone patios, and bespoke garden architecture.",
@@ -74,6 +85,7 @@ const Projects = () => {
       id: 7,
       title: "COUNTY ROOFING AND BUILDING",
       category: "WordPress / Elementor / Rank Math SEO / WPForms",
+      platform: "WORDPRESS",
       year: "2025",
       image: countyroofingandbuilding,
       description: "A roofing and building company based in the UK, offering a range of services including roofing, building, and maintenance.",
@@ -83,6 +95,7 @@ const Projects = () => {
       id: 8,
       title: "A TOUCH OF YELLOW",
       category: "WordPress / Elementor / Rank Math SEO",
+      platform: "WORDPRESS",
       year: "2025",
       image: atouchofyellow,
       description: "A strategic marketing and analytics agency that helps purpose-led businesses grow with intention through brand strategy, storytelling, and measurable data tracking.",
@@ -92,6 +105,7 @@ const Projects = () => {
       id: 9,
       title: "DAIRYLAND",
       category: "Shopify Plus / Ella Theme / Tiktok Feed / Judge.me",
+      platform: "SHOPIFY",
       year: "2025",
       image: dairyland,
       description: "A flagship farm-to-table e-commerce ecosystem for a premier Pakistani dairy provider, featuring fresh milk subscriptions and premium health-focused branding.",
@@ -101,6 +115,7 @@ const Projects = () => {
       id: 10,
       title: "FrameFusion",
       category: "Shopify Plus / Kalles Theme / Judge.me",
+      platform: "SHOPIFY",
       year: "2026",
       image: framefusion,
       description: "A premium e-commerce platform specializing in high-quality wall decor, Islamic calligraphy, and motivational art sets with seamless nationwide delivery.",
@@ -108,8 +123,29 @@ const Projects = () => {
     },
     {
       id: 11,
+      title: "Krayz.pk",
+      category: "Shopify Plus / Kalles Theme / Judge.me",
+      platform: "SHOPIFY",
+      year: "2025",
+      image: krayz,
+      description: "A top-tier apparel e-commerce platform for a Pakistani clothing brand, featuring premium streetwear, athletic collections, and a conversion-focused shopping journey.",
+      link: "https://krayz.pk"
+    },
+    {
+      id: 12,
+      title: "BF MAKEUP",
+      category: "Shopify Plus / Kalles Theme / Judge.me",
+      platform: "SHOPIFY",
+      year: "2025",
+      image: bfmakeup,
+      description: "A high-performance, luxury e-commerce solution for Pakistan’s premium beauty market, featuring seamless navigation, advanced product filtering, and a powerful admin ecosystem",
+      link: "https://bfmakeup.pk"
+    },
+    {
+      id: 13,
       title: "ADESOLA SERIES",
       category: "WordPress / Elementor / WooCommerce / MailChimp / MetForms / Contact Form 7",
+      platform: "WORDPRESS",
       year: "2026",
       image: adesolaseries,
       description: "An educational e-commerce platform dedicated to introducing children to Yoruba language and culture through a joyful collection of interactive books, learning posters, and activity kits.",
@@ -117,7 +153,11 @@ const Projects = () => {
     }
   ];
 
-  const visibleProjects = showAll ? projectList : projectList.slice(0, 6);
+  const filteredProjects = activeFilter === 'ALL' 
+    ? projectList 
+    : projectList.filter(project => project.platform === activeFilter);
+
+  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
 
   return (
     <section 
@@ -128,7 +168,7 @@ const Projects = () => {
       <div className="w-full">
         
         {/* --- SECTION HEADER (PATTERN SYNC) --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 mb-16 md:mb-24">
           <div className="lg:col-span-8 lg:col-start-1 text-center md:text-left">
              <div className="">
                 <span className="text-[10px] font-black tracking-[0.5em] text-white/40 uppercase block mb-8">
@@ -150,6 +190,31 @@ const Projects = () => {
              <p className="max-w-75 text-[11px] font-bold tracking-widest text-white/30 uppercase leading-relaxed text-center md:text-left lg:text-right">
                 A curation of high-end digital narratives, from architectural form to technical precision.
              </p>
+          </div>
+        </div>
+
+        {/* --- FILTER BUTTONS (APPLE PILL STYLE) --- */}
+        <div className="flex justify-center md:justify-start mb-16 overflow-hidden">
+          <div className="flex md:inline-flex items-center gap-1 p-1 bg-[#0A0A0A] border border-white/5 rounded-full backdrop-blur-xl max-w-full overflow-x-auto no-scrollbar scrollbar-hide">
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                onClick={() => {
+                  setActiveFilter(filter);
+                  setShowAll(false);
+                }}
+                className={`flex items-center gap-2 px-4 md:px-6 py-2 md:py-2.5 rounded-full text-[9px] md:text-[11px] font-extrabold tracking-[0.15em] uppercase transition-all duration-500 ease-out cursor-pointer whitespace-nowrap ${
+                  activeFilter === filter 
+                    ? 'bg-white text-black shadow-[0_10px_20px_rgba(255,255,255,0.1)]' 
+                    : 'text-white/40 hover:text-white'
+                }`}
+              >
+                {filter}
+                {activeFilter === filter && (
+                  <span className="w-1 h-1 rounded-full bg-black shrink-0" />
+                )}
+              </button>
+            ))}
           </div>
         </div>
 
@@ -222,14 +287,14 @@ const Projects = () => {
         </div>
 
         {/* --- FOOTER CTA: PATTERN MATCH BUTTON --- */}
-        {!showAll && (
+        {!showAll && filteredProjects.length > 6 && (
           <div className="mt-12 md:mt-32 flex justify-center">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 group/cta cursor-pointer">
                 <button 
                   onClick={() => setShowAll(true)}
                   className="px-12 py-5 rounded-full bg-white text-black text-[11px] font-black tracking-[0.5em] uppercase hover:bg-neutral-200 transition-all shadow-[0_0_50px_rgba(255,255,255,0.1)] group cursor-pointer"
                 >
-                  See All Projects
+                  See All {activeFilter !== 'ALL' ? activeFilter : ''} Projects
                 </button>
                 <div 
                   onClick={() => setShowAll(true)}
