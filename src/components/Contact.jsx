@@ -95,13 +95,24 @@ const Contact = () => {
                     </a>
                  </div>
 
-                 {/* Social Slot */}
+                  {/* Social Slot */}
                  <div>
                     <span className="text-[10px] font-black tracking-widest text-white/20 uppercase block mb-6">Social Narrative</span>
                     <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                       {['Instagram', 'Dribbble', 'LinkedIn', 'Twitter'].map((social) => (
-                          <a key={social} href="#" className="px-6 py-2 rounded-full border border-white/10 hover:border-white transition-all text-[11px] font-bold tracking-widest uppercase hover:bg-white/5">
-                             {social}
+                       {[
+                         { label: 'LinkedIn', url: 'https://www.linkedin.com/in/umurawais' },
+                         { label: 'GitHub', url: 'https://github.com/UmurAwais' },
+                         { label: 'Facebook', url: 'https://www.facebook.com/umarawaisofficial' },
+                         { label: '𝕏', url: 'https://x.com/umurawais' }
+                       ].map((social) => (
+                          <a 
+                            key={social.label} 
+                            href={social.url} 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-6 py-2 rounded-full border border-white/10 hover:border-white transition-all text-[11px] font-bold tracking-widest uppercase hover:bg-white/5"
+                          >
+                             {social.label}
                           </a>
                        ))}
                     </div>

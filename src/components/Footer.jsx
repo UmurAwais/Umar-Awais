@@ -8,6 +8,7 @@ const Footer = () => {
     { label: 'Linkedin', url: 'https://www.linkedin.com/in/umurawais' },
     // { label: 'Instagram', url: 'https://www.instagram.com/umurawais' },
     { label: 'Github', url: 'https://github.com/UmurAwais' },
+    { label: '𝕏', url: 'https://x.com/umurawais' },
   ];
 
   return (
