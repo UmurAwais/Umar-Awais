@@ -194,7 +194,7 @@ const Projects = () => {
         </div>
 
         {/* --- FILTER BUTTONS (APPLE PILL STYLE) --- */}
-        <div className="flex justify-center md:justify-start mb-16 overflow-hidden">
+        <div className="flex justify-center md:justify-start mb-16">
           <div className="flex md:inline-flex items-center gap-1 p-1 bg-[#0A0A0A] border border-white/5 rounded-full backdrop-blur-xl max-w-full overflow-x-auto no-scrollbar scrollbar-hide">
             {filters.map((filter) => (
               <button
