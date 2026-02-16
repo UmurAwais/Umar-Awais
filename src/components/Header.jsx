@@ -12,13 +12,6 @@ const Header = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isHomePage) {
-      if (location.pathname.startsWith('/blog')) {
-        setActiveTab('blog');
-      }
-      return;
-    }
-
     const handleScroll = () => {
       const position = window.scrollY;
       setIsScrolled(position > 50);
@@ -30,20 +23,30 @@ const Header = () => {
       const percent = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
       setScrollProgress(percent);
 
-      const sections = ['home', 'about', 'services', 'portfolio', 'blog', 'contact'];
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
-            setActiveTab(section);
+      if (isHomePage) {
+        const sections = ['home', 'about', 'services', 'portfolio', 'blog', 'contact'];
+        for (const section of sections) {
+          const el = document.getElementById(section);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= 150 && rect.bottom >= 150) {
+              setActiveTab(section);
+            }
           }
         }
       }
     };
 
+    if (!isHomePage) {
+      if (location.pathname.startsWith('/blog')) {
+        setActiveTab('blog');
+      } else {
+        setActiveTab(null);
+      }
+    }
+
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Call once on mount
+    handleScroll(); 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [location, isHomePage]);
 
