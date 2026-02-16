@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import logo from '../assets/web development.png';
+import logo from '../assets/web development.webp';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

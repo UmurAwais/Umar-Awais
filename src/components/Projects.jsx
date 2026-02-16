@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
-import kbcreatives from '../assets/kbcreatives.png';
-import sparktrainings from '../assets/sparktrainings.png';
-import brightproposal from '../assets/brightproposal.png';
-import ghlogistics from '../assets/ghlogistics.png';
-import a13tyres from '../assets/a13tyres.png';
-import harvest from '../assets/harvest.png';
-import countyroofingandbuilding from '../assets/countyroofingandbuilding.png'
-import atouchofyellow from '../assets/atouchofyellow.png'
-import dairyland from '../assets/dairyland.png'
-import framefusion from '../assets/framefusion.png'
-import adesolaseries from '../assets/adesolaseries.png'
-import krayz from '../assets/krayz.png'
-import bfmakeup from '../assets/bfmakeup.png'
+import kbcreatives from '../assets/kbcreatives.webp';
+import sparktrainings from '../assets/sparktrainings.webp';
+import brightproposal from '../assets/brightproposal.webp';
+import ghlogistics from '../assets/ghlogistics.webp';
+import a13tyres from '../assets/a13tyres.webp';
+import harvest from '../assets/harvest.webp';
+import countyroofingandbuilding from '../assets/countyroofingandbuilding.webp'
+import atouchofyellow from '../assets/atouchofyellow.webp'
+import dairyland from '../assets/dairyland.webp'
+import framefusion from '../assets/framefusion.webp'
+import adesolaseries from '../assets/adesolaseries.webp'
+import krayz from '../assets/krayz.webp'
+import bfmakeup from '../assets/bfmakeup.webp'
 
 const Projects = () => {
   const sectionRef = useRef(null);

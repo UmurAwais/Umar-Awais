@@ -66,7 +66,7 @@ const Hero = () => {
       {/* BACKGROUND GRAPHIC */}
       <div className="absolute right-0 top-0 w-full lg:w-1/2 h-full z-0 pointer-events-none transition-transform duration-700 ease-out" style={{ transform: `translateX(${mousePos.x * 0.5}px) translateY(${mousePos.y * 0.5}px)` }}>
         <div className="relative w-full h-full opacity-40 lg:opacity-60">
-          <img src="/umar-portrait.png" alt="Umar Awais Landscape" className="w-full h-full object-cover object-center" />
+          <img src="/umar-portrait.webp" alt="Umar Awais Landscape" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 opacity-[0.2] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
           <div className="absolute inset-0 bg-linear-to-r from-black via-black/40 to-transparent"></div>
           <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-black/20"></div>

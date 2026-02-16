@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import logo from '../assets/web development.png';
+import logo from '../assets/web development.webp';
 
 const About = () => {
   const sectionRef = useRef(null);
