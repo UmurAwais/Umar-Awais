@@ -12,6 +12,7 @@ import framefusion from '../assets/framefusion.webp'
 import adesolaseries from '../assets/adesolaseries.webp'
 import krayz from '../assets/krayz.webp'
 import bfmakeup from '../assets/bfmakeup.webp'
+import humsubstore from '../assets/humsubstore.webp'
 
 const Projects = () => {
   const sectionRef = useRef(null);
@@ -143,6 +144,16 @@ const Projects = () => {
     },
     {
       id: 13,
+      title: "Hum Sub Store",
+      category: "Shopify Plus / Kalles Theme / Judge.me",
+      platform: "SHOPIFY",
+      year: "2025",
+      image: humsubstore,
+      description: "A sophisticated Shopify Plus ecosystem engineered for Pakistan's premier party retail market. This high-conversion platform features bespoke product discovery architecture, optimized mobile UX patterns, and seamless social proof integration to drive elite-level performance at scale.",
+      link: "https://humsubstore.com"
+    },
+    {
+      id: 14,
       title: "ADESOLA SERIES",
       category: "WordPress / Elementor / WooCommerce / MailChimp / MetForms / Contact Form 7",
       platform: "WORDPRESS",
