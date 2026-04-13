@@ -13,6 +13,7 @@ import adesolaseries from '../assets/adesolaseries.webp'
 import krayz from '../assets/krayz.webp'
 import bfmakeup from '../assets/bfmakeup.webp'
 import humsubstore from '../assets/humsubstore.webp'
+import alhaq from '../assets/alhaq.webp'
 
 const Projects = () => {
   const sectionRef = useRef(null);
@@ -35,7 +36,7 @@ const Projects = () => {
     {
       id: 2,
       title: "Spark Trainings",
-      category: "ReactJS / Tailwind / MongoDB / FireBase / NodeJS / ExpressJS",
+      category: "ReactJS / TailwindCSS / MongoDB / FireBase / NodeJS / ExpressJS",
       platform: "REACT",
       year: "2025",
       image: sparktrainings,
@@ -160,7 +161,17 @@ const Projects = () => {
       year: "2026",
       image: adesolaseries,
       description: "An educational e-commerce platform dedicated to introducing children to Yoruba language and culture through a joyful collection of interactive books, learning posters, and activity kits.",
-      link: "http://adesolaseries.com/"
+      link: "https://adesolaseries.com/"
+    },
+    {
+      id: 15,
+      title: "AL-HAQ LEARNING HUB",
+      category: "ReactJS / TailwindCSS / MongoDB / FireBase / NodeJS / ExpressJS",
+      platform: "REACT",
+      year: "2026",
+      image: alhaq,
+      description: "A high-fidelity competitive exam preparation portal engineered for Pakistan's premier public sector aspirants. This results-driven LMS features a specialized 'One Paper MCQ' curriculum, interactive screening modules, and a proven track record of bridging the gap between education and career placement.",
+      link: "https://alhaqlearninghub.com/"
     }
   ];
 
