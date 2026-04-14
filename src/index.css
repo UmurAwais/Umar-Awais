@@ -53,6 +53,55 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
+  .glass-liquid {
+    background: linear-gradient(
+      160deg, 
+      rgba(255, 255, 255, 0.1) 0%, 
+      rgba(255, 255, 255, 0.04) 50%, 
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    backdrop-filter: blur(45px) saturate(210%) brightness(105%);
+    -webkit-backdrop-filter: blur(45px) saturate(210%) brightness(105%);
+    border: 0.5px solid rgba(255, 255, 255, 0.22);
+    border-top-color: rgba(255, 255, 255, 0.45);
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      inset 0 0 20px rgba(255, 255, 255, 0.04),
+      0 25px 50px -12px rgba(0, 0, 0, 0.5),
+      0 12px 20px -8px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-liquid::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    background: radial-gradient(
+      circle at 50% 0%, 
+      rgba(255, 255, 255, 0.18) 0%, 
+      transparent 50%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Micro-Noise Grain for Physicality */
+  .glass-liquid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.025;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 1;
+  }
+
   /* Sophisticated Shimmer */
   .shimmer-premium {
     position: relative;

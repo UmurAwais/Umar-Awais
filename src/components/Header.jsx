@@ -109,7 +109,7 @@ const Header = () => {
         </div>
 
         {/* FLOATING NAV - Premium Geometry */}
-        <nav className={`pointer-events-auto hidden md:flex items-center px-1.5 py-1.5 glass-premium rounded-full shadow-2xl transition-all duration-700 ${isScrolled ? 'bg-black/80' : ''}`}>
+        <nav className={`pointer-events-auto hidden md:flex items-center px-1.5 py-1.5 glass-liquid rounded-full shadow-2xl transition-all duration-700 ${isScrolled ? 'bg-black/60' : ''}`}>
           <div className="flex items-center">
             {navItems.map((item) => (
               <button
