@@ -52,63 +52,72 @@
     -webkit-backdrop-filter: blur(25px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
+}
 
-  .glass-liquid {
-    position: relative;
-    isolation: isolate;
-    background: linear-gradient(
-      160deg, 
-      rgba(255, 255, 255, 0.12) 0%, 
-      rgba(255, 255, 255, 0.04) 50%, 
-      rgba(255, 255, 255, 0.01) 100%
-    );
-    backdrop-filter: blur(45px) saturate(210%) brightness(105%);
-    -webkit-backdrop-filter: blur(45px) saturate(210%) brightness(105%);
-    border: 0.5px solid rgba(255, 255, 255, 0.22);
-    border-top-color: rgba(255, 255, 255, 0.45);
-    border-bottom-color: rgba(255, 255, 255, 0.05);
-    box-shadow: 
-      inset 0 1px 0 rgba(255, 255, 255, 0.35),
-      inset 0 0 20px rgba(255, 255, 255, 0.04),
-      0 25px 50px -12px rgba(0, 0, 0, 0.5),
-      0 12px 20px -8px rgba(0, 0, 0, 0.4);
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    will-change: backdrop-filter, transform;
-    overflow: hidden;
-  }
+/* --- iOS 26 LIQUID GLASS: PREMIUM GLOBAL SCOPE --- */
+.glass-liquid {
+  position: relative !important;
+  isolation: isolate !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 9999px !important; /* Forces Pill Shape */
+  background: linear-gradient(
+    170deg, 
+    rgba(255, 255, 255, 0.12) 0%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    rgba(255, 255, 255, 0.01) 100%
+  ) !important;
+  backdrop-filter: blur(40px) saturate(210%) brightness(110%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(210%) brightness(110%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-top-color: rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.3),
+    inset 0 0 15px rgba(255, 255, 255, 0.05),
+    0 20px 40px -10px rgba(0, 0, 0, 0.5) !important;
+  transform: translateZ(0) !important;
+  will-change: backdrop-filter, transform !important;
+  overflow: hidden !important;
+}
 
-  .glass-liquid.is-scrolled {
-    background: rgba(0, 0, 0, 0.6) !important;
-  }
+.glass-liquid.is-scrolled {
+  background: linear-gradient(
+    170deg, 
+    rgba(10, 10, 10, 0.8) 0%, 
+    rgba(0, 0, 0, 0.7) 100%
+  ) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
 
-  .glass-liquid::before {
-    content: '';
-    position: absolute;
-    top: -30%;
-    left: -10%;
-    width: 120%;
-    height: 100%;
-    background: radial-gradient(
-      circle at 50% 0%, 
-      rgba(255, 255, 255, 0.18) 0%, 
-      transparent 50%
-    );
-    pointer-events: none;
-    z-index: 0;
-  }
+.glass-liquid::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -40% !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 80% !important;
+  background: radial-gradient(
+    ellipse at 50% 0%, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    transparent 70%
+  ) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
 
-  /* Micro-Noise Grain for Physicality */
-  .glass-liquid::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    opacity: 0.025;
-    mix-blend-mode: overlay;
-    pointer-events: none;
-    z-index: 1;
-  }
+.glass-liquid::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") !important;
+  opacity: 0.02 !important;
+  mix-blend-mode: overlay !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+@layer utilities {
 
   /* Sophisticated Shimmer */
   .shimmer-premium {

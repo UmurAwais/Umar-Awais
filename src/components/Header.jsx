@@ -85,7 +85,7 @@ const Header = () => {
         style={{ width: `${scrollProgress}%` }}
       />
 
-      <div className={`w-full px-6 py-6 md:px-12 flex items-center justify-between transition-all duration-700 ${isScrolled ? 'translate-y-3 scale-[0.97]' : ''}`}>
+      <div className={`w-full px-6 py-6 md:px-12 flex items-center justify-between transition-all duration-700`}>
         
         {/* LOGO - Refined with Asset Image */}
         <div className="flex-none pointer-events-auto">

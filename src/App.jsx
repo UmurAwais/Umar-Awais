@@ -11,8 +11,8 @@ const App = () => {
     <Router>
       <ScrollToTopReset />
       <div className="min-h-screen bg-black w-full relative">
-        {/* Premium Grain Texture Overlay */}
-        <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-9999 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+        {/* Premium Grain Texture Overlay - Moved behind content to prevent filter interference */}
+        <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-[0] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
         
         <Routes>
           <Route path="/" element={<Home />} />
